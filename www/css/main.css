@@ -1,0 +1,852 @@
+@charset "utf-8";
+/* CSS Document */
+body{direction:rtl}
+*{
+	font-family:"Iranian_Sans" !important;
+}
+
+.amr_header{
+	background:#01b59a;
+	width:100%;
+	top:0;
+	height: 50px;
+	position:fixed;
+	z-index:900;
+	
+}
+.amr_footer{
+	background:#01b59a;
+	width:100%;
+	bottom:0;
+	height: 50px;
+	position:fixed;
+}
+#showRightPush:hover{
+border:0 !important}
+.amr_header #showRightPush {
+    background-color: transparent;
+    background-image: url("../img/icon_menu.png");
+    background-repeat: no-repeat;
+    background-size: 21px auto;
+    border: 0 none;
+    box-shadow: none;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+}
+.amr_header .amr_backbtn{
+	background-color: transparent;
+    background-image: url("../img/back_arrow.png");
+    background-repeat: no-repeat;
+    background-size: 21px auto;
+    border: 0 none;
+    box-shadow: none;
+    height: 30px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 30px;
+
+}
+.cbp-spmenu h3 {
+background: #01b59a none repeat scroll 0 0 !important;
+color:white !important;
+}
+.cbp-spmenu {
+    background: #f3f3f3 none repeat scroll 0 0 !important;
+	direction:ltr !important;
+}
+.cbp-spmenu {
+	text-align:right
+}
+.cbp-spmenu a {
+    color: gray !important;
+	}
+.cbp-spmenu a:hover{
+    color: white !important;
+	background:#00c7a9 !important;
+}
+.cbp-spmenu-vertical a {
+    border-bottom: 1px solid #ece9e9 !important;
+	}
+.cbp-spmenu-right.cbp-spmenu-open {
+    overflow: auto;
+	}
+	
+	
+	
+.amr_title {
+    color: white;
+    font-size: 17px;
+    line-height: 16px;
+    position: absolute;
+    right: 61px;
+    top: 0;
+}
+.amr_mahsol_img {
+    display: block;
+    margin: 50px auto;
+    max-width: 700px;
+    width: 100%;
+}
+.amr_mahsol_title_text {
+    color: #aea634;
+    font-size: 16px;
+    margin-top: 34px;
+    margin-right: 15px;
+}
+.amr_mahsol_tozihat {
+    color: #787878;
+    font-size: 13px;
+	margin: 24px 15px 84px;
+	text-align: justify;
+}
+.amr_footer_price {
+    bottom: 0;
+    color: white;
+    font-size: 13px;
+    line-height: 50px;
+    margin-right: 15px;
+}
+.amr_price {
+    margin-right: 4px;
+}
+.amr_footer_btn {
+   background-repeat: no-repeat;
+background-size: 23px auto;
+    float: left;
+    height: 40px;
+    line-height: 50px;
+    margin-left: 15px;
+    margin-top: -37px;
+    width: 35px;
+	
+}
+.amr_icon_share{
+	background-image:url(../img/icon_share.png);
+	    background-size: 20px auto;
+}
+
+.amr_icon_download{
+	background-image:url(../img/icon_download.png);
+}
+
+.amr_icon_speach{
+	background-image:url(../img/icon_speach.png);
+}
+.amr_icon_camera{
+	background-image:url(../img/icon_camera.png)
+}
+
+.amr_icon_buy{
+	background-image:url(../img/icon_buy.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*/************************ tak asar**************************/
+
+
+.amr_tak_asar_img {
+   display: block;
+    margin: 50px auto;
+    max-width: 700px;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    z-index: -2;
+}
+.amr_ta_asar_contact_img {
+    background-image: url("../img/contact_gerd.png");
+    background-position: 12px center;
+    background-repeat: no-repeat;
+    background-size: 80px auto;
+    border-left: 1px solid #c5c5c5;
+    float: right;
+    height: 80px;
+    margin-right: 13px;
+    width: 94px;
+}
+.amr_ta_asar_row {
+    float: right;
+    margin-bottom: 65px;
+    margin-top: -40px;
+    width: 100%;
+}
+
+.amr_ta_asar_row p {
+    color: black;
+    font-size: 14px;
+    line-height: 27px;
+    margin-right: 124px;
+    margin-top: -8px;
+}
+.amr_next {
+    background-image: url("../img/next.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 34px auto;
+    bottom: 0;
+    height: 68px;
+    position: fixed;
+    right: 0;
+    top: 40%;
+    width: 32px;
+    z-index: 2147483647;
+}
+.amr_prev{
+background-image:url(../img/prev.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 34px auto;
+    bottom: 0;
+    height: 68px;
+    position: fixed;
+    left: 0;
+    top: 40%;
+    width: 32px;
+    z-index: 2147483647;
+}
+.footer_tak_asar .amr_icon_speach {
+    background-size: 26px auto;
+    float: right;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+.footer_tak_asar .amr_icon_share {
+    background-size: 22px auto;
+    float: right;
+    margin-top: 15px;
+    opacity: 0.82;
+}
+.footer_tak_asar .amr_icon_download {
+    float: right;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+/*/************************ sabte nam**************************/
+
+
+
+
+
+
+.amr_sabtenam_img {
+	display: block;
+    margin: 50px auto 0;
+    max-width: 700px;
+    width: 100%;
+}
+.amr_sabtenam_title_text {
+    color: #26baa1;
+    text-align: center;
+    width: 100%;
+}
+.amr_sabtenam_tozihat {
+    color: #bebebe;
+    text-align: center;
+    width: 100%;
+}
+#amr_sabtenam_form {
+    margin: 0 auto 74px;
+    max-width: 404px;
+    padding: 0 32px;
+    width: 100%;
+}
+#amr_sabtenam_form input{
+	width:100%;
+	border:0;
+	background-color:#f3f3f3;
+	height:30px;
+	margin-bottom:6px;
+	padding-right: 11px;
+	color:#867f7f
+}
+#amr_nazar_form {
+    float: left;
+margin: 38px 40px 70px;
+    position: relative;
+    width: 50%;
+}
+@media all and (max-width: 500px){
+#amr_nazar_form {
+   width: 70%;
+}
+}
+
+#amr_nazar_form input {
+    background-color: #f3f3f3;
+    border: 0 none;
+    color: #867f7f;
+    height: 30px;
+    margin-bottom: 6px;
+    margin-top: 15px;
+    padding-right: 11px;
+    width: 100%;
+}
+#amr_nazar_form > p {
+    position: absolute;
+    right: -44px;
+	color:#01b59a;
+}
+#amr_nazar_form textarea {
+    background-color: #f3f3f3;
+    border: 0 none;
+    color: #867f7f;
+    height: 200px;
+    margin-bottom: 6px;
+    margin-top: 9px;
+    padding-right: 11px;
+	padding-top:5px;
+    width: 100%;
+}
+
+#amr_nazar_form > button {
+    background-color: #01b59a;
+    border: 0 none;
+    color: white;
+    display: block;
+    height: 28px;
+    margin: 0 auto;
+    width: 84px;
+}
+
+#amr_sabtenam_form > button {
+    background-color: #01b59a;
+    border: 0 none;
+    color: white;
+    display: block;
+    height: 28px;
+    margin: 0 auto;
+    width: 84px;
+}
+
+/*/************************hemayat**************************/
+
+
+.amr_hemayat_img {
+	display: block;
+    margin: 50px auto 0;
+    max-width: 700px;
+    width: 100%;
+}
+.amr_hemayat_title_text {
+    color: #bebebe;
+    text-align: center;
+    width: 100%;
+	   padding: 0 72px;
+}
+.amr_hemayat_tozihat {
+	color: #26baa1;
+    text-align: center;
+    width: 100%;
+   padding: 0 72px;
+margin-bottom: 36px;
+}
+.amr_hemayat_button{
+ background-color: #01b59a;
+    border: 0 none;
+    color: white;
+    display: block;
+    font-size: 13px;
+    height: 28px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6px;
+    text-align: center;
+    width: 100px;
+	margin-bottom:70px
+
+}
+
+
+/*/************************akhbar**************************/
+
+
+.amr_akhbar_img {
+    display: block;
+    margin: 85px auto 35px;
+    max-width: 700px;
+    padding: 0 15px;
+    width: 100%;
+}
+.amr_akhbar_title_text {
+    color: #aea634;
+    font-size: 16px;
+    margin-top: 34px;
+    margin-right: 15px;
+}
+.amr_akhbar_matn {
+    color: #787878;
+    font-size: 13px;
+	margin: 15px 15px 84px;
+	text-align: justify;
+}
+.footer_akhbar .amr_icon_share {
+    margin-top: 16px;
+}
+.footer_akhbar .amr_icon_speach {
+    margin-top: 16px;
+}
+.footer_akhbar .amr_icon_camera {
+    margin-top: 16px;
+}
+.footer_akhbar  .amr_icon_speach{
+opacity:0.75}
+
+.footer_akhbar  .amr_icon_share{
+opacity:0.75}
+
+
+
+/*/************************khabarhaaaa**************************/
+.amr_akhbarha_row{
+	float: right;
+    height: 121px;
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+	padding:0 11px;
+
+}
+div.amr_akhbarha_rows :last-child{
+	margin-bottom:63px;
+}
+.amr_akhbarha_pic{
+    float: right;
+    height: 120px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    width: 120px;
+
+	}
+	
+.amr_akhbarha_title{	
+	color: #aea634;
+    font-size: 13px;
+    margin-top: 0;    
+	height: 37px;
+	}
+.amr_akhbarha_summery{
+color: #747474;
+    font-size: 13px;
+    height: 60px;
+    margin: 0px 0 0;
+    padding: 0;
+    text-align: right;
+}
+@media all and (MIN-width: 699px){
+	.amr_akhbarha_summery{
+		margin: -17px 0 0;
+	}
+}
+
+
+.amr_khabarha_khat{
+ border-bottom: 1px solid #d5d5d5;
+    margin-right: 140px;
+    width: 100%;
+	position:absolute;
+	bottom:0;
+	margin-bottom: 0 !important;
+}
+.amr_khabarha_khat_back{
+  background-color: white;
+    bottom: -4px;
+    height: 11px;
+    left: 0;
+    margin-bottom: 0 !important;
+    position: absolute;
+    width: 18px;
+
+
+}
+.amr_akhbarha_more {
+    display: block;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    width: 70px;
+	color:white;
+}
+.amr_akhbarha_more:hover{
+color:white;
+border:none;
+
+}
+/*/************************kole majomehaaaaa**************************/
+
+.amr_majmoeha_row{
+	float: right;
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+	padding:0 11px;
+
+}
+div.amr_majmoeha_rows :last-child{
+	margin-bottom:63px;
+}
+div.amr_majmoeha_rows :first-child{
+ margin-top: 13px;
+ }
+
+
+.amr_majmoeha_pic{
+border-radius: 4em;
+    float: right;
+    height: 100px;
+    margin-left: 20px;
+    width: 100px;
+  margin-top: 0 !important;}
+.amr_majmoeha_title{	
+color: #aea634;
+    font-size: 17px;
+    height: 26px;
+	 margin-top: 15px !important;
+	}
+.amr_majmoeha_khat{
+background-image: url("../img/khat.png");
+    bottom: 0;
+    clear: both;
+    float: right;
+    height: 1px;
+    margin-bottom: 0 !important;
+    width: 100%;
+margin-top: -26px !important;}
+.amr_majmoeha_poster{
+  bottom: 29px;
+    color: #787878;
+    font-size: 12px;
+    position: absolute;
+    right: 133px;
+}	
+
+.amr_majmoeha_date{
+  bottom: 27px;
+    color: #787878;
+    font-size: 12px;
+    left: 41px;
+    position: absolute;
+}
+.amr_majmoeha_secondrow {
+padding-right: 122px;
+   padding-left: 30px;
+}
+	/*/************************majmoe**************************/
+	
+	
+.amr_majmoe_topside{
+background-color:#00c7a9;
+float: right;
+    height: auto;
+    width: 100%;
+}
+.amr_majmoe_topside_center{
+	margin:0 auto;
+	width:100%;
+	max-width:700px;
+	 padding: 0 20px;
+}
+.amr_majmoe_topside_right{
+width:40%;
+float:right;
+margin-top:40px;
+background-color:#00c7a9;
+}
+.amr_majmoe_topside_left{
+	width:60%;
+	float:left;
+	margin-top:40px;
+	color:white;
+	background-color:#00c7a9;
+}
+.amr_majmoe_img {
+    width: 100%;
+	  max-width: 240px;
+	  float:left;
+}
+.amr_majmoe_totalview{
+background-image: url("../img/icon_totalview.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 19px auto;
+    clear: both;
+    color: white;
+    float: left;
+    font-size: 15px;
+    padding-left: 24px;
+    padding-top: 6px;
+    text-align: left;
+    width: 100%;
+}
+.amr_majmoe_date{
+   background-image: url("../img/icon_date.png");
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    background-size: 14px auto;
+    clear: both;
+    color: white;
+    float: left;
+    font-size: 15px;
+    padding-left: 25px;
+    padding-top: 7px;
+    text-align: left;
+    width: 100%;
+	margin-bottom:40px
+}
+.amr_majmoe_tozih_text {
+color: #4f603e;
+    padding-right:20px;
+    text-align: justify;
+	margin-bottom:40px
+}
+.amr_majmoe_downbutton{
+ border-bottom: 1px solid #bfbfbf;
+    height: 40px;
+    margin: 0 auto;
+    max-width: 700px;
+    position: relative;
+    width: 100%;
+}
+.amr_majmoe_downside {
+    float: right;
+    position: relative;
+    width: 100%;
+}
+.amr_majmoe_downbutton_vertical{
+    background-image: url("../img/icon_horizontal.png");
+    background-position: center center;
+    right: 0;
+}
+.amr_majmoe_downbutton_horizontal{
+background-image: url("../img/icon_vertical.png");
+    background-position: center center;
+    border-left: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+    display: block;
+    float: none !important;
+    height: 23px !important;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    top: 8px;
+
+}
+
+.amr_majmoe_downbutton_tedad{
+     background-image: url("../img/icon_tedad.png");
+    background-position: center center;
+    color: #bfbfbf;
+    left: 0;
+    line-height: 45px;
+padding-left: 59px;
+text-align:center
+}
+.amr_majmoe_button{
+
+	background-repeat:no-repeat;
+	background-size:20px;
+	float:right;
+	
+	 height: 40px;
+ position: absolute;
+width: 30%;}
+
+
+
+
+.amr_majmoe_content.fullwidthpic {
+    padding: 20px;
+	 margin-bottom: 20px;
+}
+
+.fullwidthpic .amr_majmoe_row_pic {
+  background-image: url("../img/tak_asar.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 180px;
+    min-height: 180px;
+    width: 100%;
+}
+.fullwidthpic .amr_majmoe_row_pic img{
+display:none;}
+.fullwidthpic .amr_majmoe_second_content_title {
+    color: #b3a936;
+}
+.fullwidthpic .amr_majmoe_second_content_tozih {
+    color: #787878;
+}
+.fullwidthpic .amr_majmoe_second_content {
+    position: relative;
+}
+.fullwidthpic .amr_majmoe_second_content_khat {
+    border-bottom: 1px solid #dcdcdc;
+    bottom: -16px;
+    position: absolute;
+    width: 100%;
+}
+.fullwidthpic .amr_majmoe_content_row {
+    margin-bottom: 48px;
+}
+
+
+.takpic .amr_majmoe_content_row {
+    margin: 20px auto 0;
+    max-width: 700px;
+   width: 64%;
+}
+.takpic .amr_majmoe_content_row :last-child{
+	margin-bottom:70px
+}
+.amr_majmoe_content.takpic {
+    margin: 0 auto;
+    max-width: 700px;
+    width: 100%;
+}
+.takpic .amr_majmoe_row_pic > img {
+    width: 100%;
+	height:100%
+}
+.takpic .amr_majmoe_row_pic {
+float: right;
+    height: 200px;
+    margin: 0 9px 10px 0;
+    max-width: 700px;
+    width: 140px;
+}
+.takpic .amr_majmoe_second_content {
+    display: none;
+}
+
+
+
+
+
+
+
+
+	/*/************************comment**************************/
+
+
+.amr_comment_row {
+float: right;
+    height: auto;
+    padding: 0 15px;
+    width: 100%;
+	 position: relative;
+}
+#container{
+margin-top:50px}
+.amr_comment_row_right{
+   float: right;
+    height: 100%;
+	width: 20%;
+	margin-top: 0 !important;
+	
+	}
+.amr_comment_row_left{
+	float: left;
+	    width: 80%;
+
+}
+.amr_comment_name {
+    text-align: center;
+    width: 100%;
+	color:#aea634;
+	width:100%
+}
+.amr_comment_date {
+  color: #aea634;
+    font-size: 14px;
+    margin-top: -10px;
+    text-align: center;
+    width: 100%;
+}
+
+.amr_comment_matn {
+    color: #787878;
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 19px !important;
+    text-align: justify;
+    width: 100%;
+}
+
+@media all and (max-width: 500px){
+	.amr_comment_matn{
+		padding-right:20px
+	}
+}
+.amr_comment_reply {
+    background-image: url("../img/icon_reply.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 22px auto;
+    bottom: 12px;
+    height: 20px;
+    left: 21px;
+    position: absolute;
+    width: 20px;
+}
+	
+.amr_comment_khat {
+    border-bottom: 1px solid #c3c3c3;
+    clear: both;
+    float: right;
+    height: 1px;
+    margin-top: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cbp-spmenu h3{
+ padding: 13.5px !important;
+ font-size:17px !important;
+   text-align: center;
+    width: 100%;
+}
+.cbp-spmenu-vertical{
+ width: 180px !important;
+}
+.cbp-spmenu a{
+ text-align: center;
+    width: 100%;
+}
+.cbp-spmenu-vertical a{
+ font-size: 15px;
+    padding: 10px !important;
+}
