@@ -2,11 +2,11 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "ir.smgroup.nehzat"
-        version   = "1.0.01">
+        version   = "1.0.1">
 		
 		
     <name>نهضت</name>
-    <description>نهضت مردمی پوسترهای عاشورایی</description>
+    <description>نهضت مردمي پوسترهاي عاشورايي</description>
     <author href="http://smgroup.ir" email="info@smgroup.ir">Sorush Mehr Rezvan</author>
     <!--
 		ir.smgroup.saveimage
