@@ -11,6 +11,7 @@ function getParameterByName(name) {
 		results = regex.exec(location.search);
 	return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
 function getURL(URL,cache,iframe) {
 	cache = cache || true;
 	iframe = iframe || false;
@@ -40,15 +41,15 @@ function getURL(URL,cache,iframe) {
 					loadURL($(this).attr("href"));
 				else if($(this).attr("href") == "#")
 					{}
-				else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
 					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-				else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
 					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://apps.dparseh.com" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+					openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 				}
 			});
 			
@@ -56,15 +57,15 @@ function getURL(URL,cache,iframe) {
 				e.preventDefault();
 				if($(this).attr("href") == "#")
 					{}
-				else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
 					openURL($(this).attr("href"),false,true);
-				else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
 					openURL($(this).attr("href"),false,true);
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://apps.dparseh.com" + $(this).attr("href"),false,true);
+					openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,true);
 				}
 			});
 			
@@ -73,15 +74,15 @@ function getURL(URL,cache,iframe) {
 				
 				if($(this).attr("href") == "#")
 					{}
-				else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
 					openURL($(this).attr("href"),false,false);
-				else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
 					openURL($(this).attr("href"),false,false);
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://apps.dparseh.com" + $(this).attr("href"),false,false);
+					openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,false);
 				}
 			});
 			
@@ -92,7 +93,7 @@ function getURL(URL,cache,iframe) {
 					loadURL($(this).attr("href"));
 				else
 				{
-					loadURL("http://apps.dparseh.com" + $(this).attr("href"));
+					loadURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"));
 				}
 			});
 			
@@ -135,15 +136,15 @@ function getURL(URL,cache,iframe) {
 								{}
 							else if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
 								loadURL($(this).attr("href"));
-							else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-							else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								openURL("http://apps.dparseh.com" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+								openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							}
 						});
 						
@@ -152,15 +153,15 @@ function getURL(URL,cache,iframe) {
 							
 							if($(this).attr("href") == "#")
 								{}
-							else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
 								openURL($(this).attr("href"),false,true);
-							else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
 								openURL($(this).attr("href"),false,true);
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								openURL($(this).attr("href"),false,true);
 							else
 							{
-								openURL("http://apps.dparseh.com" + $(this).attr("href"),false,true);
+								openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,true);
 							}
 						});
 						
@@ -169,15 +170,15 @@ function getURL(URL,cache,iframe) {
 							
 							if($(this).attr("href") == "#")
 								{}
-							else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
 								openURL($(this).attr("href"),false,false);
-							else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
 								openURL($(this).attr("href"),false,false);
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								openURL("http://apps.dparseh.com" + $(this).attr("href"),false,false);
+								openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,false);
 							}
 						});
 						
@@ -188,7 +189,7 @@ function getURL(URL,cache,iframe) {
 								loadURL($(this).attr("href"));
 							else
 							{
-								loadURL("http://apps.dparseh.com" + $(this).attr("href"));
+								loadURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"));
 							}
 						});
 					}
@@ -209,10 +210,10 @@ function getURL(URL,cache,iframe) {
 							async: true,
 							success : function(text)
 							{
-								var target_text = text.replace("src='images/","src='http://apps.dparseh.com/images/");
-								target_text = target_text.replace('src="images/','src="http://apps.dparseh.com/images/');
-								target_text = target_text.replace("src='/images/","src='http://apps.dparseh.com/images/");
-								target_text = target_text.replace('src="/images/','src="http://apps.dparseh.com/images/');
+								var target_text = text.replace("src='images/","src='http://smgroup.ir/nehzat-app/images/");
+								target_text = target_text.replace('src="images/','src="http://smgroup.ir/nehzat-app/images/');
+								target_text = target_text.replace("src='/images/","src='http://smgroup.ir/nehzat-app/images/");
+								target_text = target_text.replace('src="/images/','src="http://smgroup.ir/nehzat-app/images/');
 								
 								$('.container').html(target_text);
 								FastClick.attach(document.getElementById('container'));
@@ -224,15 +225,15 @@ function getURL(URL,cache,iframe) {
 										{}
 									else if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
 										loadURL($(this).attr("href"));
-									else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
 										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-									else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
 										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://apps.dparseh.com" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+										openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 									}
 								});
 
@@ -241,15 +242,15 @@ function getURL(URL,cache,iframe) {
 									
 									if($(this).attr("href") == "#")
 										{}
-									else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
 										openURL($(this).attr("href"),false,true);
-									else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
 										openURL($(this).attr("href"),false,true);
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://apps.dparseh.com" + $(this).attr("href"),false,true);
+										openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,true);
 									}
 								});
 
@@ -258,15 +259,15 @@ function getURL(URL,cache,iframe) {
 									
 									if($(this).attr("href") == "#")
 										{}
-									else if($(this).attr("href").toLowerCase().indexOf("http://apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
 										openURL($(this).attr("href"),false,false);
-									else if($(this).attr("href").toLowerCase().indexOf("http://www.apps.dparseh.com") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
 										openURL($(this).attr("href"),false,false);
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://apps.dparseh.com" + $(this).attr("href"),false,false);
+										openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,false);
 									}
 								});
 								
@@ -277,7 +278,7 @@ function getURL(URL,cache,iframe) {
 										loadURL($(this).attr("href"));
 									else
 									{
-										loadURL("http://apps.dparseh.com" + $(this).attr("href"));
+										loadURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"));
 									}
 								});
 
@@ -324,8 +325,8 @@ function getURL(URL,cache,iframe) {
 			var temp_html = '<div id="loading" ><div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:hidden;" class="blockUI blockOverlay"></div><div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:hidden;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div><div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 40%; left: 0%; text-align: center;border: medium none;overflow:hidden;height:100%;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div></div>';
 			temp_html = temp_html + "<iframe src='" + URL + "' id='comment_content' style='margin-bottom:45px;' onload='loadcompeleted();' scrolling='no'></iframe>";
 			temp_html = temp_html + "<script type='text/javascript'>";
-			if(window.localStorage.getItem('registered') == 0)
-				temp_html = temp_html + "$('.mymenu').html('');$('.ui-btn-right.menu').css('display','none');$('#header h1').css('cssText','margin-right:39px !important');$('#header .header-image').css('right','10px');";			
+			//if(window.localStorage.getItem('registered') == 0)
+			//	temp_html = temp_html + "$('.mymenu').html('');$('.ui-btn-right.menu').css('display','none');$('#header h1').css('cssText','margin-right:39px !important');$('#header .header-image').css('right','10px');";			
 			temp_html = temp_html + "iFrameResize({enablePublicMethods:true,resizedCallback:function(messageData){},messageCallback:function(messageData){iframe_recive_massage(messageData.message);}});";
 			temp_html = temp_html + "</script>";
 			temp_html = temp_html + "<style>";
@@ -355,117 +356,6 @@ function getURL(URL,cache,iframe) {
 	}
 }
 
-
-
-function getURL_login(uuid) {
-	//alert("getURL_login start");
-	$.ajax({ type: "GET",   
-			url: "http://apps.dparseh.com/?uuid=" + uuid + "&registered=" + window.localStorage.getItem('registered'),
-			async: true,
-			success : function(text)
-			{
-				//alert("getURL_login text=" + text);
-				if(text=="0")
-				{
-					window.localStorage.setItem('registered',0);
-					//alert("getURL_login 1");
-				}
-				if(text=="1")
-				{
-					window.localStorage.setItem('registered',1);
-					//alert("getURL_login 2");
-				}
-				if(text=="3")
-				{
-					//alert("getURL_login 3");
-					if(window.localStorage.getItem('uuid') !== null)
-						window.sessionStorage.setItem('uuid',window.localStorage.getItem('uuid'));
-					window.localStorage.clear();
-					window.localStorage.setItem('registered',0);
-					if(window.sessionStorage.getItem('uuid') == null)
-						window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
-					else
-						window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));
-				}
-				if(text=="4")
-				{
-					//alert("getURL_login 4");
-					if(window.localStorage.getItem('uuid') !== null)
-						window.sessionStorage.setItem('uuid',window.localStorage.getItem('uuid'));
-					window.localStorage.clear();
-					window.localStorage.setItem('registered',1);
-
-					if(window.sessionStorage.getItem('uuid') == null)
-						window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
-					else
-						window.localStorage.setItem('uuid',window.sessionStorage.getItem('uuid'));
-				}
-			},
-			error: function(jqXHR, exception) {
-			
-			}
-	});
-}
-
-function getURL_silent(URL,cache,iframe) {
-	cache = cache || true;
-	iframe = iframe || false;
-	if(iframe == "false")
-		iframe = false;
-	if(iframe == "true")
-		iframe = true;
-	if(cache == "false")
-		cache = false;
-	if(cache == "true")
-		cache = true;
-
-	var networkState = navigator.connection.type;
-	if (networkState == Connection.NONE) {
-
-	}
-	else
-	{
-//alert("we have internet");
-		if(iframe == false)
-		{
-//alert("we have internet - iframe : false");
-			var article_json = window.localStorage.getItem($.md5(URL));
-			var temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
-			if((jQuery.inArray($.md5(URL),temp_array) != -1)	&&	article_json && (cache==true) )
-			{
-
-			}
-			else
-			{
-				if(cache == true)
-				{
-					console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    get_URL / Start Download JSON For cache');
-					$.ajax({ type: "GET",   
-							url: URL,
-							async: true,
-							success : function(text)
-							{
-								var target_text = text.replace("src='images/","src='http://apps.dparseh.com/images/");
-								target_text = target_text.replace('src="images/','src="http://apps.dparseh.com/images/');
-								target_text = target_text.replace("src='/images/","src='http://apps.dparseh.com/images/");
-								target_text = target_text.replace('src="/images/','src="http://apps.dparseh.com/images/');
-
-
-								window.localStorage.setItem($.md5(URL),target_text);
-								temp_array = JSON.parse(window.sessionStorage.getItem('LOAD_URL'));
-								temp_array.push($.md5(URL));
-								window.sessionStorage.setItem('LOAD_URL',JSON.stringify(temp_array));	
-							},
-							error: function(jqXHR, exception) {
-
-							
-							}
-					});
-				}
-			}
-		}
-	}
-}
 
 
 function openURL(URL,cache,iframe) {
