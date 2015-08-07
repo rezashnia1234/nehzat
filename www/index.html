@@ -45,7 +45,7 @@
 				//alert("regID = " + e.regid);
 				//if(register_for_notifs){
 					$.ajax({ type: "POST",
-							url: "http://smgroup.ir/nehzat-app/SMCMS_notification/RegisterDeviceIDtoDB.php", 
+							url: "http://nehzat.smgroup.ir/SMCMS_notification/RegisterDeviceIDtoDB.php", 
 							data: {regID : e.regid,user:window.localStorage.getItem('uuid'),OS:device.platform},
 							async: false,
 							success : function(text)
@@ -162,7 +162,7 @@
 				console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Notification Callback Success! Result (ios) = '+result);
 				//if(register_for_notifs){
 					$.ajax({ type: "POST",
-							url: "http://smgroup.ir/nehzat-app/SMCMS_notification/RegisterDeviceIDtoDB.php", 
+							url: "http://nehzat.smgroup.ir/SMCMS_notification/RegisterDeviceIDtoDB.php", 
 							data: {regID : result,user:window.localStorage.getItem('uuid'),OS:device.platform},
 							async: false,
 							success : function(text)
@@ -227,7 +227,9 @@
 					<div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:visible;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div>
 					<div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 50%; left: 0%; text-align: center;border: medium none;overflow:visible;height:500px;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div>
 				</div>
-				START
+				<div id="small" class="a1" onclick="openURL('http://nehzat.smgroup.ir',true,false);" >
+					<span id="text"><p>بسم الله الرحمن الرحیم</p></span>
+				</div>
 		</div>
 </body>
 </html>

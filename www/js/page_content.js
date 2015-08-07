@@ -41,15 +41,15 @@ function getURL(URL,cache,iframe) {
 					loadURL($(this).attr("href"));
 				else if($(this).attr("href") == "#")
 					{}
-				else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://nehzat.smgroup.ir") >= 0)
 					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-				else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.nehzat.smgroup.ir") >= 0)
 					openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+					openURL("http://nehzat.smgroup.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 				}
 			});
 			
@@ -57,15 +57,15 @@ function getURL(URL,cache,iframe) {
 				e.preventDefault();
 				if($(this).attr("href") == "#")
 					{}
-				else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://nehzat.smgroup.ir") >= 0)
 					openURL($(this).attr("href"),false,true);
-				else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.nehzat.smgroup.ir") >= 0)
 					openURL($(this).attr("href"),false,true);
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,true);
+					openURL("http://nehzat.smgroup.ir" + $(this).attr("href"),false,true);
 				}
 			});
 			
@@ -74,15 +74,15 @@ function getURL(URL,cache,iframe) {
 				
 				if($(this).attr("href") == "#")
 					{}
-				else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://nehzat.smgroup.ir") >= 0)
 					openURL($(this).attr("href"),false,false);
-				else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
+				else if($(this).attr("href").toLowerCase().indexOf("http://www.nehzat.smgroup.ir") >= 0)
 					openURL($(this).attr("href"),false,false);
 				else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 					loadURL($(this).attr("href"));
 				else
 				{
-					openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,false);
+					openURL("http://nehzat.smgroup.ir" + $(this).attr("href"),false,false);
 				}
 			});
 			
@@ -93,7 +93,7 @@ function getURL(URL,cache,iframe) {
 					loadURL($(this).attr("href"));
 				else
 				{
-					loadURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"));
+					loadURL("http://nehzat.smgroup.ir" + $(this).attr("href"));
 				}
 			});
 			
@@ -136,15 +136,15 @@ function getURL(URL,cache,iframe) {
 								{}
 							else if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
 								loadURL($(this).attr("href"));
-							else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://nehzat.smgroup.ir") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-							else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.nehzat.smgroup.ir") >= 0)
 								openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+								openURL("http://nehzat.smgroup.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 							}
 						});
 						
@@ -153,15 +153,15 @@ function getURL(URL,cache,iframe) {
 							
 							if($(this).attr("href") == "#")
 								{}
-							else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://nehzat.smgroup.ir") >= 0)
 								openURL($(this).attr("href"),false,true);
-							else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.nehzat.smgroup.ir") >= 0)
 								openURL($(this).attr("href"),false,true);
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								openURL($(this).attr("href"),false,true);
 							else
 							{
-								openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,true);
+								openURL("http://nehzat.smgroup.ir" + $(this).attr("href"),false,true);
 							}
 						});
 						
@@ -170,15 +170,15 @@ function getURL(URL,cache,iframe) {
 							
 							if($(this).attr("href") == "#")
 								{}
-							else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://nehzat.smgroup.ir") >= 0)
 								openURL($(this).attr("href"),false,false);
-							else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
+							else if($(this).attr("href").toLowerCase().indexOf("http://www.nehzat.smgroup.ir") >= 0)
 								openURL($(this).attr("href"),false,false);
 							else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 								loadURL($(this).attr("href"));
 							else
 							{
-								openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,false);
+								openURL("http://nehzat.smgroup.ir" + $(this).attr("href"),false,false);
 							}
 						});
 						
@@ -189,7 +189,7 @@ function getURL(URL,cache,iframe) {
 								loadURL($(this).attr("href"));
 							else
 							{
-								loadURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"));
+								loadURL("http://nehzat.smgroup.ir" + $(this).attr("href"));
 							}
 						});
 					}
@@ -210,10 +210,10 @@ function getURL(URL,cache,iframe) {
 							async: true,
 							success : function(text)
 							{
-								var target_text = text.replace("src='images/","src='http://smgroup.ir/nehzat-app/images/");
-								target_text = target_text.replace('src="images/','src="http://smgroup.ir/nehzat-app/images/');
-								target_text = target_text.replace("src='/images/","src='http://smgroup.ir/nehzat-app/images/");
-								target_text = target_text.replace('src="/images/','src="http://smgroup.ir/nehzat-app/images/');
+								var target_text = text.replace("src='images/","src='http://nehzat.smgroup.ir/images/");
+								target_text = target_text.replace('src="images/','src="http://nehzat.smgroup.ir/images/');
+								target_text = target_text.replace("src='/images/","src='http://nehzat.smgroup.ir/images/");
+								target_text = target_text.replace('src="/images/','src="http://nehzat.smgroup.ir/images/');
 								
 								$('.container').html(target_text);
 								FastClick.attach(document.getElementById('container'));
@@ -225,15 +225,15 @@ function getURL(URL,cache,iframe) {
 										{}
 									else if($(this).attr("href").toLowerCase().indexOf(".pdf") >= 0)
 										loadURL($(this).attr("href"));
-									else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://nehzat.smgroup.ir") >= 0)
 										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
-									else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.nehzat.smgroup.ir") >= 0)
 										openURL($(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
+										openURL("http://nehzat.smgroup.ir" + $(this).attr("href"),$(this).attr("cache"),$(this).attr("iframe"));
 									}
 								});
 
@@ -242,15 +242,15 @@ function getURL(URL,cache,iframe) {
 									
 									if($(this).attr("href") == "#")
 										{}
-									else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://nehzat.smgroup.ir") >= 0)
 										openURL($(this).attr("href"),false,true);
-									else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.nehzat.smgroup.ir") >= 0)
 										openURL($(this).attr("href"),false,true);
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,true);
+										openURL("http://nehzat.smgroup.ir" + $(this).attr("href"),false,true);
 									}
 								});
 
@@ -259,15 +259,15 @@ function getURL(URL,cache,iframe) {
 									
 									if($(this).attr("href") == "#")
 										{}
-									else if($(this).attr("href").toLowerCase().indexOf("http://smgroup.ir/nehzat-app") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://nehzat.smgroup.ir") >= 0)
 										openURL($(this).attr("href"),false,false);
-									else if($(this).attr("href").toLowerCase().indexOf("http://www.smgroup.ir/nehzat-app") >= 0)
+									else if($(this).attr("href").toLowerCase().indexOf("http://www.nehzat.smgroup.ir") >= 0)
 										openURL($(this).attr("href"),false,false);
 									else if($(this).attr("href").toLowerCase().indexOf("http://") >= 0)
 										loadURL($(this).attr("href"));
 									else
 									{
-										openURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"),false,false);
+										openURL("http://nehzat.smgroup.ir" + $(this).attr("href"),false,false);
 									}
 								});
 								
@@ -278,7 +278,7 @@ function getURL(URL,cache,iframe) {
 										loadURL($(this).attr("href"));
 									else
 									{
-										loadURL("http://smgroup.ir/nehzat-app" + $(this).attr("href"));
+										loadURL("http://nehzat.smgroup.ir" + $(this).attr("href"));
 									}
 								});
 
