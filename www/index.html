@@ -161,19 +161,16 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 // START push Notification :////////////////////////////////////////////////////////////////
-			pushNotification = window.plugins.pushNotification;
-			//if(window.localStorage.getItem('register_for_notifs')=="yes"){
-			//	console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    register_for_notifs : yes');
-			//}
-			//else
-			//{
+			if(window.localStorage.getItem('register_for_notifs') == null)
+				pushNotification = window.plugins.pushNotification;
 				console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    register_for_notifs : no // ' + device.platform);
 				if ( device.platform == 'android' || device.platform == 'Android' || device.platform == "amazon-fireos" ){
 					pushNotification.register(successHandler,errorHandler,{"senderID":"804625540618","ecb":"onNotificationGCM"});
 				} else {
 					pushNotification.register(tokenHandler,errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"onNotificationGCM"});//"onNotificationAPN"});
 				}
-			//}
+			}
+
 			function tokenHandler(result) {
 				console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Notification Callback Success! Result (ios) = '+result);
 				//if(register_for_notifs){
