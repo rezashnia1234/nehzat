@@ -18,6 +18,7 @@
     <script src="js/jquery.md5.js"></script>
     <script src="js/page_content.js"></script>
     <script src="js/back_btn.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/query-string.js"></script>
 	<script src="js/iframeResizer.min.js"	type="text/javascript"></script>
 	
@@ -31,6 +32,21 @@
 		}
 		
 		function onDeviceReady() {
+			$("body").swipe({
+				swipe:function(event, direction, distance, duration, fingerCount){
+					//$(this).text("You swiped " + direction + " for " + distance + "px" );
+					//alert("You swiped " + direction + " for " + distance + "px" );
+					if(direction=="right")
+					{
+						if ( device.platform == 'iOS' )
+						{
+							go_back();
+						}
+					}
+				},
+				threshold:100
+			});
+			
 			if(window.localStorage.getItem('uuid') == null)
 				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
 				
