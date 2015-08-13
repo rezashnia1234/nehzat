@@ -124,6 +124,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 		function onDeviceReady() {
+			/*
 			$("body").swipe({
 				swipe:function(event, direction, distance, duration, fingerCount){
 					//$(this).text("You swiped " + direction + " for " + distance + "px" );
@@ -138,6 +139,7 @@
 				},
 				threshold:100
 			});
+			*/
 			
 			if(window.sessionStorage.getItem('session_rand') == null)
 			{
@@ -224,7 +226,8 @@
 		function onExitConfirm(buttonIndex) {
 			if(buttonIndex==1)
 			{
-				//navigator.app.exitApp();
+				navigator.app.exitApp();
+				/*
 				if (navigator && navigator.app) {
 					navigator.app.exitApp();
 				} 
@@ -233,6 +236,7 @@
 						navigator.device.exitApp();
 					}
 				}
+				*/
 			}
 			else
 			{
