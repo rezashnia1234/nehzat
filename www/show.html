@@ -26,12 +26,14 @@
 		
 		function init() {			
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
+			alert("start");
 			document.addEventListener("deviceready", onDeviceReady, false);
 
 			//onDeviceReady();
 		}
 		
 		function onDeviceReady() {
+			alert("1");
 			$("body").swipe({
 				swipe:function(event, direction, distance, duration, fingerCount){
 					//$(this).text("You swiped " + direction + " for " + distance + "px" );
@@ -46,14 +48,14 @@
 				},
 				threshold:100
 			});
-			
+			alert("2");
 			if(window.localStorage.getItem('uuid') == null)
 				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
 				
 			window.sessionStorage.setItem('we_are_in',"show");
 			window.sessionStorage.setItem('is_back_btn_triggered',"false");
 			//FastClick.attach(document.body);
-			FastClick.attach(document.getElementById('controls'));
+			FastClick.attach(document.getElementById('container'));
 			
 			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
 				document.addEventListener("backbutton", go_back, false);
