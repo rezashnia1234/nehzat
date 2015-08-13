@@ -2,10 +2,10 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "ir.smgroup.nehzat"
-        version   = "1.0.1">
+        version   = "1.0.2">
 		
 		
-    <name>نهضت</name>
+    <name>پوستر انقلاب</name>
     <description>نهضت مردمي پوسترهاي عاشورايي</description>
     <author href="http://smgroup.ir" email="info@smgroup.ir">Sorush Mehr Rezvan</author>
     <!--
@@ -19,7 +19,7 @@
     <!-- Customize your app and platform with the preference element. -->
     <!--<preference name="phonegap-version"           value="3.7.0" />-->          <!-- all: current version of PhoneGap -->
 	<preference name='phonegap-version'			  value='cli-5.1.1' />
-    <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
     <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
