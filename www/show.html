@@ -26,14 +26,12 @@
 		
 		function init() {			
 			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
-			alert("start");
 			document.addEventListener("deviceready", onDeviceReady, false);
 
 			//onDeviceReady();
 		}
 		
 		function onDeviceReady() {
-			alert("1");
 			$("body").swipe({
 				swipe:function(event, direction, distance, duration, fingerCount){
 					//$(this).text("You swiped " + direction + " for " + distance + "px" );
@@ -48,7 +46,7 @@
 				},
 				threshold:100
 			});
-			alert("2");
+			
 			if(window.localStorage.getItem('uuid') == null)
 				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
 				
@@ -71,7 +69,7 @@
 			var show_cache	=	Base64.decode(getParameterByName("cache"));
 			var show_iframe	=	Base64.decode(getParameterByName("iframe"));
 			
-			alert(show_url + "//" + show_cache + "//" + show_iframe);
+			//alert(show_url + "//" + show_cache + "//" + show_iframe);
 			
 			getURL(show_url,show_cache,show_iframe);
 		
