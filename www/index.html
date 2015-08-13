@@ -237,6 +237,18 @@ body{background:#00b599;overflow-x: hidden;}
 		}
 		$(window).load(function() {
 			$(".mypreload").html("");
+			winH = $(window).height();
+			box_Object = $("#Menu_table");
+			boxH = box_Object.height();
+			delta = 0;
+			if(winH>boxH)
+			{
+				delta = (winH - boxH)/2;
+			}
+			if(delta>65)
+				delta = delta *0.8;
+			box_Object.css("top",delta);
+			//alert(delta);
 		});
 
 		function go_back_index() {
