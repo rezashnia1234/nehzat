@@ -52,8 +52,8 @@
 				
 			window.sessionStorage.setItem('we_are_in',"show");
 			window.sessionStorage.setItem('is_back_btn_triggered',"false");
-			//FastClick.attach(document.body);
-			FastClick.attach(document.getElementById('container'));
+			FastClick.attach(document.body);
+			//FastClick.attach(document.getElementById('container'));
 			
 			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
 				document.addEventListener("backbutton", go_back, false);
