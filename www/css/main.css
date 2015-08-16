@@ -11,6 +11,7 @@ iframe{
 	outline: 0;
 	vertical-align: baseline;
 	background: transparent;
+	width:100%;
 }
 .amr_header{
 	background:#01b59a;
@@ -582,10 +583,11 @@ padding-right: 122px;
 	
 	
 .amr_majmoe_topside{
-background-color:#00c7a9;
-float: right;
+    background-color: #00c7a9;
+    float: right;
     height: auto;
     width: 100%;
+    min-height: 370px;    top: 50px;
 }
 .amr_majmoe_topside_center{
 	margin:0 auto;
@@ -745,7 +747,9 @@ width: 30%;}
 .takpic .amr_majmoe_content_row {
     margin: 20px auto 0;
     max-width: 700px;
-   width: 64%;
+    width: auto;
+    text-align: center;
+    display: inline-block;
 }
 .takpic .amr_majmoe_content_row :last-child{
 	margin-bottom:70px
@@ -754,17 +758,19 @@ width: 30%;}
     margin: 0 auto;
     max-width: 700px;
     width: 100%;
+	text-align:center
 }
 .takpic .amr_majmoe_row_pic > img {
     width: 100%;
 	height:100%
 }
 .takpic .amr_majmoe_row_pic {
-float: right;
+    float: right;
     height: 200px;
     margin: 0 9px 10px 0;
     max-width: 700px;
     width: 140px;
+    display: inline-block;
 }
 .takpic .amr_majmoe_second_content {
     display: none;
@@ -880,4 +886,38 @@ margin-top:50px}
 .cbp-spmenu-vertical a{
  font-size: 15px;
     padding: 10px !important;
+}
+
+
+
+
+
+
+
+
+.wrapper-parallax  > header {
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    z-index: -1;
+    height: 100px;
+}
+.wrapper-parallax {
+    margin-top: 490px;
+    margin-bottom: 60px;
+}
+.amr_majmoe_downside {
+    position: relative;
+    z-index: 1;
+
+    background: white;
+    min-height: 500px;
+	    top: -72px;
+}
+.wrapper-parallax > footer {
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+    height: 60px;
 }

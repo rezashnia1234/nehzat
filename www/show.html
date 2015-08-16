@@ -36,8 +36,8 @@
 		}
 		
 		function onDeviceReady() {
-		
-			$("body").swipe({
+			///*
+			$("#container").swipe({
 				swipe:function(event, direction, distance, duration, fingerCount){
 					//$(this).text("You swiped " + direction + " for " + distance + "px" );
 					//alert("You swiped " + direction + " for " + distance + "px" );
@@ -51,7 +51,7 @@
 				},
 				threshold:100
 			});
-		
+			//*/
 			if(window.localStorage.getItem('uuid') == null)
 				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
 				
