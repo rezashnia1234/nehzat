@@ -5,7 +5,7 @@ body{direction:rtl}
 	font-family:"Iranian_Sans" !important;
 }
 iframe{
-	margin: -27px 0 0px 0;
+	margin: -37px 0 0px 0;
 	padding: 0;
 	border: 0;
 	outline: 0;
@@ -900,7 +900,7 @@ margin-top:50px}
     top: 30px;
     width: 100%;
     z-index: -1;
-    height: 100px;
+    height: auto;
 }
 .wrapper-parallax {
     margin-top: 490px;

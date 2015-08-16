@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>بسم الله الرحمن الرحیم</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+    <script src="phonegap.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.md5.js"></script>
+    <script src="js/page_content.js"></script>
+    <script src="js/back_btn.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/query-string.js"></script>
+	<script src="js/iframeResizer.min.js"	type="text/javascript"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.dotdotdot.js"></script>
+	<script>
+		
+		function init() {			
+			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			//onDeviceReady();
+		}
+		
+		function onDeviceReady() {
+			$("body").swipe({
+				swipe:function(event, direction, distance, duration, fingerCount){
+					//$(this).text("You swiped " + direction + " for " + distance + "px" );
+					//alert("You swiped " + direction + " for " + distance + "px" );
+					if(direction=="right")
+					{
+						if ( device.platform == 'iOS' )
+						{
+							go_back();
+						}
+					}
+				},
+				threshold:100
+			});
+			
+			if(window.localStorage.getItem('uuid') == null)
+				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+				
+			window.sessionStorage.setItem('we_are_in',"show");
+			window.sessionStorage.setItem('is_back_btn_triggered',"false");
+			FastClick.attach(document.body);
+			//FastClick.attach(document.getElementById('container'));
+			
+			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
+				document.addEventListener("backbutton", go_back, false);
+			}
+			
+			if(window.sessionStorage.getItem('LOAD_URL') == null)
+			{
+				window.sessionStorage.setItem('LOAD_URL',JSON.stringify(["786","110"]));				
+			}
+			
+			//getURL(window.sessionStorage.getItem('NEXT_URL'),window.sessionStorage.getItem('NEXT_CACHE'),window.sessionStorage.getItem('NEXT_IFRAME'));
+			var show_url	=	Base64.decode(getParameterByName("url"));
+			var show_cache	=	Base64.decode(getParameterByName("cache"));
+			var show_iframe	=	Base64.decode(getParameterByName("iframe"));
+			
+			//alert(show_url + "//" + show_cache + "//" + show_iframe);
+			
+			getURL(show_url,show_cache,show_iframe);
+		
+		}
+	
+		function loadcompeleted() {
+			$("#loading").html("");
+			//$("#controls").css("display","none");
+		}
+		function uniqueDeviceIDsuccess(uuid)
+		{
+			//alert(uuid);
+			window.localStorage.setItem('uuid',uuid);
+		};
+		function uniqueDeviceIDfail(uuid)
+		{
+			//alert("uniqueDeviceIDfail" + uuid);
+		};
+		$(document).ready(function() {
+			$(".ellipsis").dotdotdot();
+		});	
+/*
+		function loadcompeleted() {
+			$(".mypreload").html("");
+		}
+		$(window).load(function() {
+			$(".mypreload").html("");
+		});
+*/
+	</script>
+	<style>
+
+	
+	</style>
+</head>
+<body onload="init();"  class="cbp-spmenu-push">
+	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+		<h3>منو</h3>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=category&layout=smcms:news&id=20&Itemid=113',true,false);">اخبار</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=categories&layout=smcms:majmueha&id=10&Itemid=112',true,false);">مجموعه ها</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=article&id=21&Itemid=114',true,false);">محصولات</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_rsform&view=rsform&layout=smcms:register&formId=3&Itemid=108',false,true);">عضویت</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=article&id=19&Itemid=109',true,false);">درباره ما</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_blankcomponent&view=default&Itemid=110',false,true);">تماس با ما</a>
+	</nav>
+	<div class="container " id="container" >
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<style>
+#joomla_message{
+	display:none;
+}
+</style>
+
+<div class="container" id="container">
+		<div class="amr_header">
+			<button id="showRightPush"></button>
+									<p class="amr_title">نمایش آثار یک مجموعه</p>
+			<button onclick="go_back();" class="amr_backbtn"></button>
+		</div>
+		
+		<div id="joomla_message">
+		<div id="system-message-container">
+	</div>
+
+		</div>
+		<script>
+	$("p.amr_title").html('مجموعه پوسترهای آل یهود');
+	$( document ).ready(function() {
+		var hits = $(".hit");
+		var count_view = $("span.amr_majmoe_totalview");
+		var hits_count = 0;
+		hits.each(function() {
+			hits_count = hits_count + parseInt($(this).html());
+			count_view.html(hits_count);
+		});
+		
+		
+		$(".amr_majmoe_downbutton_vertical").click(function(){
+		$(".amr_majmoe_content").fadeOut(500);
+		 setTimeout(show, 500);				
+		}); 
+		function show(){
+		$(".amr_majmoe_content").removeClass("takpic");
+		$(".amr_majmoe_content").addClass("fullwidthpic");
+		$(".amr_majmoe_content").fadeIn(500);
+		}
+		
+		
+		
+		
+		
+		$(".amr_majmoe_downbutton_horizontal").click(function(){
+			$(".amr_majmoe_content").fadeOut(500);
+			 setTimeout(show1, 500);				
+		}); 
+		function show1(){
+			$(".amr_majmoe_content").removeClass("fullwidthpic");
+			$(".amr_majmoe_content").addClass("takpic");
+			$(".amr_majmoe_content").fadeIn(500);
+
+		}
+		
+	});
+</script>
+<div class="wrapper-parallax">
+	<header class="amr_majmoe_topside">
+		<div class="amr_majmoe_topside_center">
+			<div class="amr_majmoe_topside_right">
+								<img class="amr_majmoe_img" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/posters/majmoeh/ale-yahood.png?parameters=@width=292@height=289@quality=90@image=/images/posters/majmoeh/ale-yahood.png">
+				<span class="amr_majmoe_totalview">7854</span>
+				<span class="amr_majmoe_date">بهار 94</span>
+			</div>
+			<div class="amr_majmoe_topside_left">
+				<p class="amr_majmoe_tozih_text">نهضــت مــردمی پوســـتر انقلاب مجموعه پوسـتری با عـــنوان «آل‌یهود» را بر روی سایت نهضت بارگذاری کرد.این فایل ها قابلیت چاپ در ابعاد بزرگ را دارد.گفتنی است با بارگذاری این 22 اثر که حاصل تلاش 16 طراح از سراسر کشور است، تعداد آثار تولیدی این نهضت بالغ بر 746 پوستر گردیده است.</p>
+			</div>
+		</div>	
+	</header>
+	<section class="amr_majmoe_downside content">
+		<div class="amr_majmoe_downbutton">
+			<span class="amr_majmoe_downbutton_vertical amr_majmoe_button" ></span>
+			<span class="amr_majmoe_downbutton_horizontal amr_majmoe_button"></span>
+			<span class="amr_majmoe_downbutton_tedad amr_majmoe_button">22</span>
+		</div>
+		
+		
+		<div class="amr_majmoe_content takpic">
+
+
+
+
+	
+	
+								<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_868483139760792" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-23.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-23.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_868483139760792{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-23.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-23.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=42:2015-08-15-16-23-31&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				ستهزمون			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: لیلا نیرومند / تهران			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">49</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_627549664443358" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-22.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-22.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_627549664443358{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-22.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-22.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=41:2015-08-15-16-21-05&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				آل یهود			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: مینا گیلاسی / مشهد			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_398569920891895" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-21.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-21.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_398569920891895{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-21.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-21.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=40:2015-08-15-16-19-34&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				آل یهود			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: هاله سادات وجدانی اکبرزاده / مشهد			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_832104801991954" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-20.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-20.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_832104801991954{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-20.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-20.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=39:2015-08-15-16-17-53&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				اتحاد عبری عربی			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: حامد امامی / مشهد			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_790170449716970" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-19.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-19.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_790170449716970{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-19.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-19.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=38:2015-08-15-16-15-41&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				اتحاد عبری عربی			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: حامد امامی / مشهد			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_563576240232213" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-18.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-18.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_563576240232213{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-18.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-18.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=37:2015-08-15-16-12-58&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				یمن،نمایشگاه دستاوردهای اسلام آمریکایی			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: حسین بهرام نژاد / اهواز			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_282479609781875" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-16.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-16.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_282479609781875{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-16.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-16.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=36:2015-08-15-16-09-56&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				کل یوم عاشورا			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: حمید فخار / مشهد			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_767791130347177" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-15.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-15.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_767791130347177{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-15.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-15.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=35:2015-08-15-16-07-36&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				نه مسلمند و نه حتی عرب، که آل یهودند			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: سمانه نخعی / کرمان			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_927546018036082" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-14.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-14.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_927546018036082{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-14.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-14.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=34:2015-08-15-16-05-36&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				آل یهود			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: نیره اخباری			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_538058653753250" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-13.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-13.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_538058653753250{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-13.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-13.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=33:2015-08-15-16-04-12&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				هیپنوتیزم			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: مرتضی حاجیانی / قم			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">1</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_933359344815835" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-12.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-12.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_933359344815835{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-12.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-12.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=32:2015-08-15-16-02-09&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				تحریم عمره			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: لیلا قاضی عسگر / اصفهان			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_497468200512229" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-11.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-11.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_497468200512229{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-11.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-11.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=31:2015-08-15-16-00-18&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				آل یهود			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: محمود آزادنیا / مشهد			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_951172277936711" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-10.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-10.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_951172277936711{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-10.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-10.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=30:2015-08-15-15-57-56&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				سقوط			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: محمدصادق ایلی / شیراز			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_658713376335799" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-09.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-09.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_658713376335799{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-09.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-09.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=29:2015-08-15-15-54-24&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				جنایت علیه بشریت			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: مصطفی موسوی / تهران			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_271016999287529" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-08.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-08.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_271016999287529{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-08.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-08.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=8:2015-08-08-15-39-25&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				اسلام آمریکایی			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: حمید فخار / مشهد			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_360105967801063" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-07.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-07.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_360105967801063{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-07.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-07.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=7:2015-08-08-15-40-01&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				سعودی، نه انسان، نه عرب و نه مسلمان			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: سید محمدجواد طاهری / بابل			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_642471080692484" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-06.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-06.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_642471080692484{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-06.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-06.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=6:2&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				آل یهود 2			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: امید رستمی /			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_709776018466800" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-05.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-05.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_709776018466800{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-05.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-05.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=5:2015-08-08-15-41-08&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				پیروز نخواهند شد			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: حمید ژولانژاد،میلاد پسندیده / دزفول			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_796237113233655" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-04.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-04.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_796237113233655{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-04.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-04.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=4:2015-08-08-15-41-40&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				ولا تقتلوا النفس التی حرم الله الا بالحق			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: مهلا میرزایی / کرمان			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_198699118476360" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-03.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-03.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_198699118476360{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-03.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-03.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=3:2015-08-08-15-42-17&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				یمن در خون			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: مهلا میرزایی / کرمان			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_225632034987210" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-02.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-02.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_225632034987210{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-02.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-02.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=2:2015-08-08-15-42-39&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				پیش بینی			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: محمدصادق ایلی / شیراز			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">0</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->									<!-- start post -->
+
+	<div class="amr_majmoe_content_row">
+		<div class="amr_majmoe_row_pic C_428176528727635" >
+				<img src="http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-01.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-01.jpg" alt=""/>		</div>
+<style>
+.fullwidthpic .amr_majmoe_row_pic.C_428176528727635{
+  background-image: url("http://nehzat.smgroup.ir/templates/smcms/image.php/images/posters/94/aleyahood/postermovement100-01.jpg?parameters=@width=570@height=800@quality=90@image=/images/posters/94/aleyahood/postermovement100-01.jpg") !important;
+}
+</style>
+		<a href="/index.php?option=com_content&amp;view=article&amp;id=1:2015-08-08-15-43-00&amp;catid=18&amp;Itemid=125">
+		<div class="amr_majmoe_second_content">
+			<p class="amr_majmoe_second_content_title ellipsis">
+				آل یهود			</p>
+			<p class="amr_majmoe_second_content_tozih ellipsis">
+								طراح: محمود آزادنیا / مشهد مقدس			</p>
+			<div class="amr_majmoe_second_content_khat"></div>
+			<div class="hit" style="display:none;">29</div>
+		</div>
+		</a>
+	</div>
+<!-- end post -->				
+
+	
+
+
+
+
+	
+		</div>
+	</section>
+</div>
+
+		<br/>
+		<footer class="amr_footer"></footer>
+
+	<script src="js/classie.js"></script>
+<script>
+//$(".container").css("overflow","auto");
+//alert($(body).html());
+</script>
+</div>
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+	</div>
+	<script src="js/classie.js"></script>
+</body>
+</html>
