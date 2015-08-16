@@ -459,6 +459,15 @@ function iframe_recive_massage(msg) {
 		
 		window.location.href = "index.html";
 	}
+	else if(msg=="gotohome")
+	{
+		window.location.href = "index.html";
+	}
+	else if(msg=="gotoback")
+	{
+		// go_back();
+		parent.history.back();
+	}
 	else{
 		alert(msg);
 	}
