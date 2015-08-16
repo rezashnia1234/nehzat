@@ -119,6 +119,10 @@
     background-size: 21px auto !important;
     right: 180px !important;
     transform: rotate(180deg) !important;
+    -webkit-transform: rotate(180deg) !important;
+    -moz-transform: rotate(180deg) !important;
+	-o-transform: rotate(180deg) !important;
+	
     width: 114px !important;
 }
 
