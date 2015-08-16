@@ -36,19 +36,18 @@ border:0 !important}
     top: 15px;
     width: 30px;
 }
-.amr_header .amr_backbtn{
-	background-color: transparent;
-    background-image: url("../img/back_arrow.png");
-    background-repeat: no-repeat;
-    background-size: 21px auto;
-    border: 0 none;
-    box-shadow: none;
-    height: 30px;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    width: 30px;
-
+.amr_header .amr_backbtn {
+  background-color: transparent;
+  background-image: url("../img/back_arrow.png");
+  background-position: 15px 15px;
+  background-repeat: no-repeat;
+  background-size: 21px auto;
+  border: 0 none;
+  box-shadow: none;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  width: 85px;
 }
 .cbp-spmenu h3 {
 background: #01b59a none repeat scroll 0 0 !important;
@@ -114,15 +113,17 @@ color:white !important;
     margin-right: 4px;
 }
 .amr_footer_btn {
-   background-repeat: no-repeat;
-background-size: 23px auto;
-    float: left;
-    height: 40px;
-    line-height: 50px;
-    margin-left: 15px;
-    margin-top: -37px;
-    width: 35px;
-	
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 23px auto;
+  cursor: pointer;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 0 !important;
+  padding-left: 15px;
+  padding-top: 15px;
+  width: 50px;
 }
 .amr_icon_share{
 	background-image:url(../img/icon_share.png);
@@ -182,12 +183,10 @@ background-size: 23px auto;
     width: 94px;
 }
 .amr_ta_asar_row {
-    float: right;
-    margin-bottom: 65px;
-    margin-top: -40px;
-    width: 100%;
+  margin: -40px auto 65px;
+  max-width: 700px;
+  width: 100%;
 }
-
 .amr_ta_asar_row p {
     color: black;
     font-size: 14px;
@@ -266,13 +265,13 @@ background-image:url(../img/prev.png);
     text-align: center;
     width: 100%;
 }
-#amr_sabtenam_form {
+#userForm {
     margin: 0 auto 74px;
     max-width: 404px;
     padding: 0 32px;
     width: 100%;
 }
-#amr_sabtenam_form input{
+#userForm input{
 	width:100%;
 	border:0;
 	background-color:#f3f3f3;
@@ -319,25 +318,35 @@ margin: 38px 40px 70px;
 	padding-top:5px;
     width: 100%;
 }
-
-#amr_nazar_form > button {
+#userForm textarea {
+    background-color: #f3f3f3;
+    border: 0 none;
+    color: #867f7f;
+    height: 200px;
+    margin-bottom: 6px;
+    margin-top: 9px;
+    padding-right: 11px;
+	padding-top:5px;
+    width: 100%;
+}
+#amr_nazar_form > .rsform-submit-button {
     background-color: #01b59a;
     border: 0 none;
     color: white;
     display: block;
     height: 28px;
     margin: 0 auto;
-    width: 84px;
+    width: 117px;
 }
 
-#amr_sabtenam_form > button {
+#userForm > .rsform-submit-button {
     background-color: #01b59a;
     border: 0 none;
     color: white;
     display: block;
     height: 28px;
     margin: 0 auto;
-    width: 84px;
+    width: 117px;
 }
 
 /*/************************hemayat**************************/
@@ -381,11 +390,11 @@ margin-bottom: 36px;
 
 
 /*/************************akhbar**************************/
-
+.amr_akhbarha_title a,.amr_akhbarha_title a:hover{color:inherit;}
 
 .amr_akhbar_img {
     display: block;
-    margin: 85px auto 35px;
+    margin: 85px auto 0px;
     max-width: 700px;
     padding: 0 15px;
     width: 100%;
@@ -393,7 +402,7 @@ margin-bottom: 36px;
 .amr_akhbar_title_text {
     color: #aea634;
     font-size: 16px;
-    margin-top: 34px;
+    margin-top: 70px;
     margin-right: 15px;
 }
 .amr_akhbar_matn {
@@ -422,7 +431,7 @@ opacity:0.75}
 /*/************************khabarhaaaa**************************/
 .amr_akhbarha_row{
 	float: right;
-    height: 121px;
+    min-height: 121px;
     margin-top: 15px;
     position: relative;
     width: 100%;
@@ -430,7 +439,10 @@ opacity:0.75}
 
 }
 div.amr_akhbarha_rows :last-child{
-	margin-bottom:63px;
+	margin-bottom:42px;
+}
+.amr_akhbarha_row:last-child {
+  margin-bottom: 65px !important;
 }
 .amr_akhbarha_pic{
     float: right;
@@ -445,15 +457,19 @@ div.amr_akhbarha_rows :last-child{
 	color: #aea634;
     font-size: 13px;
     margin-top: 0;    
-	height: 37px;
+	min-height: 37px;
 	}
 .amr_akhbarha_summery{
-color: #747474;
+	color: #747474;
     font-size: 13px;
-    height: 60px;
+    min-height: 60px;
     margin: 0px 0 0;
-    padding: 0;
-    text-align: right;
+    padding: 0 0 10px 0;
+    text-align: justify;
+}
+.amr_akhbar_matn img {
+  height: auto !important;
+  width: 100%;
 }
 @media all and (MIN-width: 699px){
 	.amr_akhbarha_summery{
@@ -582,9 +598,10 @@ background-color:#00c7a9;
 	background-color:#00c7a9;
 }
 .amr_majmoe_img {
+	border-radius: 500px;
     width: 100%;
-	  max-width: 240px;
-	  float:left;
+	max-width: 240px;
+	float:left;
 }
 .amr_majmoe_totalview{
 background-image: url("../img/icon_totalview.png");
@@ -678,24 +695,29 @@ width: 30%;}
 
 .amr_majmoe_content.fullwidthpic {
     padding: 20px;
-	 margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .fullwidthpic .amr_majmoe_row_pic {
-  background-image: url("../img/tak_asar.jpg");
+	background-image: url("../img/tak_asar.jpg");
     background-position: center center;
     background-size: cover;
-    height: 180px;
+    /*height: 180px;*/
     min-height: 180px;
     width: 100%;
+	max-width:700px;
+	margin:0 auto;
 }
-.fullwidthpic .amr_majmoe_row_pic img{
-display:none;}
+.fullwidthpic .amr_majmoe_row_pic img{/*display:none;*/width:100%;}
 .fullwidthpic .amr_majmoe_second_content_title {
-    color: #b3a936;
+  color: #b3a936;
+  margin: 11px auto 0;
+  max-width: 700px;
 }
 .fullwidthpic .amr_majmoe_second_content_tozih {
-    color: #787878;
+  color: #787878;
+  margin: 11px auto 0;
+  max-width: 700px;
 }
 .fullwidthpic .amr_majmoe_second_content {
     position: relative;
