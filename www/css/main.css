@@ -779,6 +779,7 @@ width: 30%;}
     max-width: 700px;
     width: 140px;
     display: inline-block;
+	border: 1px solid #e0e0e0;
 }
 .takpic .amr_majmoe_second_content {
     display: none;
