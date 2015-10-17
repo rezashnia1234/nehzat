@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>بسم الله الرحمن الرحیم</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+    <script src="phonegap.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.md5.js"></script>
+    <script src="js/page_content.js"></script>
+    <script src="js/back_btn.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/query-string.js"></script>
+	<script src="js/iframeResizer.min.js"	type="text/javascript"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.dotdotdot.js"></script>
+	<script>
+		
+		function init() {			
+			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			//onDeviceReady();
+		}
+		
+		function onDeviceReady() {
+			$("body").swipe({
+				swipe:function(event, direction, distance, duration, fingerCount){
+					//$(this).text("You swiped " + direction + " for " + distance + "px" );
+					//alert("You swiped " + direction + " for " + distance + "px" );
+					if(direction=="right")
+					{
+						if ( device.platform == 'iOS' )
+						{
+							go_back();
+						}
+					}
+				},
+				threshold:100
+			});
+			
+			if(window.localStorage.getItem('uuid') == null)
+				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+				
+			window.sessionStorage.setItem('we_are_in',"show");
+			window.sessionStorage.setItem('is_back_btn_triggered',"false");
+			FastClick.attach(document.body);
+			//FastClick.attach(document.getElementById('container'));
+			
+			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
+				document.addEventListener("backbutton", go_back, false);
+			}
+			
+			if(window.sessionStorage.getItem('LOAD_URL') == null)
+			{
+				window.sessionStorage.setItem('LOAD_URL',JSON.stringify(["786","110"]));				
+			}
+			
+			//getURL(window.sessionStorage.getItem('NEXT_URL'),window.sessionStorage.getItem('NEXT_CACHE'),window.sessionStorage.getItem('NEXT_IFRAME'));
+			var show_url	=	Base64.decode(getParameterByName("url"));
+			var show_cache	=	Base64.decode(getParameterByName("cache"));
+			var show_iframe	=	Base64.decode(getParameterByName("iframe"));
+			
+			//alert(show_url + "//" + show_cache + "//" + show_iframe);
+			
+			getURL(show_url,show_cache,show_iframe);
+		
+		}
+	
+		function loadcompeleted() {
+			$("#loading").html("");
+			//$("#controls").css("display","none");
+		}
+		function uniqueDeviceIDsuccess(uuid)
+		{
+			//alert(uuid);
+			window.localStorage.setItem('uuid',uuid);
+		};
+		function uniqueDeviceIDfail(uuid)
+		{
+			//alert("uniqueDeviceIDfail" + uuid);
+		};
+		$(document).ready(function() {
+			$(".ellipsis").dotdotdot();
+		});	
+/*
+		function loadcompeleted() {
+			$(".mypreload").html("");
+		}
+		$(window).load(function() {
+			$(".mypreload").html("");
+		});
+*/
+	</script>
+	<style>
+
+	
+	</style>
+</head>
+<body onload="init();"  class="cbp-spmenu-push">
+	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+		<h3>منو</h3>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=category&layout=smcms:news&id=20&Itemid=113',true,false);">اخبار</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=categories&layout=smcms:majmueha&id=10&Itemid=112',true,false);">مجموعه ها</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=article&id=21&Itemid=114',true,false);">محصولات</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_rsform&view=rsform&layout=smcms:register&formId=3&Itemid=108',false,true);">عضویت</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=article&id=19&Itemid=109',true,false);">درباره ما</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_blankcomponent&view=default&Itemid=110',false,true);">تماس با ما</a>
+	</nav>
+	<div class="container " id="container" >
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<style>
+#joomla_message{
+	display:none;
+}
+</style>
+
+<div class="container" id="container">
+		<div class="amr_header">
+			<button id="showRightPush"></button>
+									<p class="amr_title">اخبار</p>
+			<button onclick="go_back();" class="amr_backbtn"></button>
+		</div>
+		
+		<div id="joomla_message">
+		<div id="system-message-container">
+	</div>
+
+		</div>
+		<div class="item-page ">
+
+	<img class="amr_akhbar_img" 
+	 src="http://nehzat.smgroup.ir/images/news/C23B1408.jpg" />
+
+
+	<p class="amr_akhbar_title_text">
+		اختتامیه‌ی کارگاه تولید پوستر سرطان مصرف	</p>
+
+
+<!-- begin class item-headinfo -->
+<div class="item-headinfor">
+
+	
+	
+
+	
+<div class="clear"></div>
+
+</div> 
+<!-- end class item-headinfo -->
+
+<!-- content-links -->
+<!-- end content-links -->
+
+<div  class="amr_akhbar_matn">
+
+<p>به گزارش دبیرخانه نهضت مردمی پوستر انقلاب آیین اختتامیه دومین کارگاه کشوری تولید پوستر با موضوع "سرطان مصرف" که با مشارکت نهضت مردمی پوستر انقلاب و مجمع طراحان انقلاب اسلامی "آیه" برگزار گردیده بود، عصر دیروز با حضور اساتید و هنرمندان شرکت کننده در کارگاه برگزار شد.</p>
+<p>حاصل این کارگاه که با حضور33 نفر از طراحان و اساتید تراز اول کشوری از 6 استان کشور برگزار شده است حدود 70پوستر است که به زودی از طریق سایت نهضت جهت استفاده عموم مردم ارائه خواهد شد.</p>
+<p>در این مراسم که در پایان سه روز برگزاری کارگاه و تولید اثر صورت می گرفت در ابتدا آثار33طراح حاضر در کارگاه و4 طراح که اثر خود را به دبیرخانه نهضت ارسال کرده بودند مورد نقد و بررسی اساتید قرار گرفت.</p>
+<p>درابتدای مراسم جعفر پیشه از مسئولین برگزاری کارگاه ضمن تقدیر از اساتید و همراهان شرکت کننده گفت: سه مولفه اصلی به عنوان شاه کلید ارتباطات گرافیک در حوزه انقلابی مد نظر ماست؛یکی این است که دوستان تقید به اعتقادات انقلابی و اسلامی داشته باشند برای ما این مهم است،دیگر اینکه مشارکت فعال در کارگاه ها و یا برنامه هایی که در فاصله این کارگاه ها برگزار می شود داشته باشند و نکته آخر اینکه از نظر کیفی به سطح قابل قبولی برسیم.</p>
+<p>در نشست پایانی این کارگاه استاد مسعود نجابتی،استاد سید مهدی حسینی،استاد محمدرضا دوست محمدی و استاد نصر به نقد و بررسی آثار ارائه شده و تبادل نظر پیرامون آن پرداختند.</p>
+<p><strong>نهادها با نشر آثار نهضت نقش خود را ایفا کنند</strong></p>
+<p>استاد نجابتی گفت: درست است اینجا کارگاه تولید پوستر است ولی خروجی های آن، این قابلیت را دارند که برخی از آن ها بیلبورد شود و برخی در آگهی و برخی دیگر در کنار متن یا جاهای دیگر استفاده شود. بد نیست با کمک نهادها از این آثار برای نصب در سطح شهرها و همچنین چاپ تمام صفحه در مجلات حمایت شود. حتی پشت قبض برق یا آب چاپ شود و به دست تمامی ایرانی ها در خانه ها برسد.</p>
+<p>استاد نجابتی به این نکته اشاره کردند که هرچه کارگاه های نهضت پیش می رد حرفه ای تر شده و سطح توقع همه مخاطبان و ما نسبت به کارهای گذشته بیشتر خواهد شد و این، امری طبیعی ست.</p>
+<p><strong>کاری نزدیک به دانشگاه‌های کشورهای پیشرفته</strong></p>
+<p>استاد محمدرضا دوست محمدی با اشاره به اینکه این کارگاه در قیاس با کارگاه قبلی خیلی بهتر بوده است می گوید: طراحان در کار تفکر و ایده، خیلی خوب عمل می کنند و با در نظر گرفتن زمان محدودی که داریم تاکنون کارها خیلی خوب بوده است. وی با اشاره به شیوه جهادی کارگاه و کارنهضت پوستر افزود: در کشورهای پیشرفته از این اتفاقات زیاد رخ می دهد که یک گروهی جمع شوند و جریاناتی را می سازند. وقتی کسی این تصمیم را می گیرد افراد جمع می شوند و این اتفاقات شکل می گیرد یا در دانشگاه ها حرکت هایی ایجاد میشود.من نمی‌دانم در پس آنها نگاه سرمایه داریست یا انسانی!اما در ایران عموما فعالیت گروهی در بین افراد چه مذهبی و چه غیر مذهبی خیلی کم است خصوصا در حوزه هنر.از این جهت خیلی کار ارزشمند با کیفیت و خالصانه ای ست.بچه ها به خاطر یک انرژی واحدی که نسبت به موضوع داشتند جمع شدند،این طبیعی ست که افراد علاقه مندند کارهایشان دیده شود ولی اینجا اینطور نیست. نمی خواهم بگویم شبیه اما نزدیک به ان اتفاقاتی ست که در دانشگاه های کشورهای پیشرفته رخ می دهد. آنجا با یک قصد و اینجا با یک هدف فرهنگی-دینی و اینکه فرهنگ،دین و ملیت در کنار هم عمل می کند حس لذت بخشی ست.</p>
+<p>وی با بیان اینکه خوبی کار کارگاهی این است که این ارتباط طولانی مدت باعث می شود اعضا بیشتر باهم تعامل و گفتگو کنند و این تعامل جذاب است اشاره کرد در این شکل کارگاه ها افراد با یک دغدغه مشترک و تقریبا شبیه به هم در کنار هم قرار می گیرند و این عامل باعث می شود بازدهی کار بالا برود.وی مزیت دیگر این کارگاه و باهم بودن را ایجاد انگیزش و انرژی بیشتر برای کار کردن دانست.</p>
+<p><strong>از اساتید هنر، اخلاق و منش می‌آموزیم</strong></p>
+<p>آقای حامد مغروری از برگزارکنندگان کارگاه (سرطان مصرف) می گوید: ثمره این کارگاه ها چندین برابر کلاسهای دانشگاهی ست. آنجا صرفا قواعد و اصول خشک را آموزش می بینیم اما اینجا بهترین نوع آموزش توسط بهترین اساتید همچون استاد نجابتی،استاد حسینی و استاد دوست محمدی ارائه می شود و نیز اخلاق و منش را نیز از آنها یاد می گیریم و در واقع آموزش و پرورش را باهم داریم.</p>
+<p>وی محکم و راسخ بودن در هدف را بزرگترین نقطه قوت فعالیت نهضت پوستر دانست و مردمی بودن و ارزش و بها دادن به طراحان و کار آنها را نیز از دیگر مزیت های آن برشمرد.</p>
+<p>در ادامه این مراسم استاد نصر با در نظر گرفتن این کارگاه به عنوان فعالیت فرهنگی موفق گفت: ضعف اصلی در فعالیت های فرهنگی ما این است که ادامه دار نیستذ و اگر این جریانات مستمر باشد و خروجی آن انعکاس پیدا کند موفق تر خواهد بود.</p>
+<p>این مراسم دو ساعته با همراهی صمیمی شرکت کنندگان و گرفتن عکس یادگاری به پایان رسید.</p>
+<p>آثاراین کارگاه پس از انجام اصلاحات و نقدهای اساتید، جهت استفاده عموم مردم بر روی سایت نهضت مردمی پوستر انقلاب قرار خواهد گرفت.</p>
+<p>پیش از این نیز آثار پوستر طراحان نهضت با موضوع افزایش جمعیت مورد استقبال مخاطبین مردمی قرار گرفت.</p></div>
+
+	<script>
+	$(document).ready(function() {
+		var amr_footer = $(".amr_footer");
+		var temp_html =  "";
+					temp_html += '<div class="amr_footer_btn amr_icon_speach" onclick="openURL(' + "'" + "http://nehzat.smgroup.ir/index.php?option=com_content&view=article&id=22:2015-08-15-10-54-53&catid=20&Itemid=113&template=comment&back=1&title=%D8%A7%D8%AE%D8%AA%D8%AA%D8%A7%D9%85%DB%8C%D9%87%E2%80%8C%DB%8C+%DA%A9%D8%A7%D8%B1%DA%AF%D8%A7%D9%87+%D8%AA%D9%88%D9%84%DB%8C%D8%AF+%D9%BE%D9%88%D8%B3%D8%AA%D8%B1+%D8%B3%D8%B1%D8%B7%D8%A7%D9%86+%D9%85%D8%B5%D8%B1%D9%81 ?>" + "'" +  ',false,true);" ></div>';
+			temp_html += '<div class="amr_footer_btn amr_icon_share"></div>';			
+					
+			
+
+		amr_footer.html(temp_html);	
+		amr_footer.addClass("footer_tak_asar");
+		//alert("20");
+	 });	
+</script>
+<br/><br/><br/>
+</div>
+		<br/>
+		<footer class="amr_footer"></footer>
+
+	<script src="js/classie.js"></script>
+<script>
+//$(".container").css("overflow","auto");
+//alert($(body).html());
+</script>
+</div>
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+	</div>
+	<script src="js/classie.js"></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>بسم الله الرحمن الرحیم</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/font.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+    <script src="phonegap.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/jquery.md5.js"></script>
+    <script src="js/page_content.js"></script>
+    <script src="js/back_btn.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/query-string.js"></script>
+	<script src="js/iframeResizer.min.js"	type="text/javascript"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script src="js/jquery.dotdotdot.js"></script>
+	<script>
+		
+		function init() {			
+			console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start init()');
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			//onDeviceReady();
+		}
+		
+		function onDeviceReady() {
+			$("body").swipe({
+				swipe:function(event, direction, distance, duration, fingerCount){
+					//$(this).text("You swiped " + direction + " for " + distance + "px" );
+					//alert("You swiped " + direction + " for " + distance + "px" );
+					if(direction=="right")
+					{
+						if ( device.platform == 'iOS' )
+						{
+							go_back();
+						}
+					}
+				},
+				threshold:100
+			});
+			
+			if(window.localStorage.getItem('uuid') == null)
+				window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess, uniqueDeviceIDfail);
+				
+			window.sessionStorage.setItem('we_are_in',"show");
+			window.sessionStorage.setItem('is_back_btn_triggered',"false");
+			FastClick.attach(document.body);
+			//FastClick.attach(document.getElementById('container'));
+			
+			if ( device.platform == 'Android' ){//Android,iOS,win7=WinCE,win8=Win32NT
+				document.addEventListener("backbutton", go_back, false);
+			}
+			
+			if(window.sessionStorage.getItem('LOAD_URL') == null)
+			{
+				window.sessionStorage.setItem('LOAD_URL',JSON.stringify(["786","110"]));				
+			}
+			
+			//getURL(window.sessionStorage.getItem('NEXT_URL'),window.sessionStorage.getItem('NEXT_CACHE'),window.sessionStorage.getItem('NEXT_IFRAME'));
+			var show_url	=	Base64.decode(getParameterByName("url"));
+			var show_cache	=	Base64.decode(getParameterByName("cache"));
+			var show_iframe	=	Base64.decode(getParameterByName("iframe"));
+			
+			//alert(show_url + "//" + show_cache + "//" + show_iframe);
+			
+			getURL(show_url,show_cache,show_iframe);
+		
+		}
+	
+		function loadcompeleted() {
+			$("#loading").html("");
+			//$("#controls").css("display","none");
+		}
+		function uniqueDeviceIDsuccess(uuid)
+		{
+			//alert(uuid);
+			window.localStorage.setItem('uuid',uuid);
+		};
+		function uniqueDeviceIDfail(uuid)
+		{
+			//alert("uniqueDeviceIDfail" + uuid);
+		};
+		$(document).ready(function() {
+			$(".ellipsis").dotdotdot();
+		});	
+/*
+		function loadcompeleted() {
+			$(".mypreload").html("");
+		}
+		$(window).load(function() {
+			$(".mypreload").html("");
+		});
+*/
+	</script>
+	<style>
+
+	
+	</style>
+</head>
+<body onload="init();"  class="cbp-spmenu-push">
+	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+		<h3>منو</h3>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=category&layout=smcms:news&id=20&Itemid=113',true,false);">اخبار</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=categories&layout=smcms:majmueha&id=10&Itemid=112',true,false);">مجموعه ها</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=article&id=21&Itemid=114',true,false);">محصولات</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_rsform&view=rsform&layout=smcms:register&formId=3&Itemid=108',false,true);">عضویت</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=article&id=19&Itemid=109',true,false);">درباره ما</a>
+		<a href="#" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_blankcomponent&view=default&Itemid=110',false,true);">تماس با ما</a>
+	</nav>
+	<div class="container " id="container" >
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<style>
+#joomla_message{
+	display:none;
+}
+</style>
+
+<div class="container" id="container">
+		<div class="amr_header">
+			<button id="showRightPush"></button>
+									<p class="amr_title">مجموعه ها</p>
+			<button onclick="go_back();" class="amr_backbtn"></button>
+		</div>
+		
+		<div id="joomla_message">
+		<div id="system-message-container">
+	</div>
+
+		</div>
+		<div class="amr_majmoeha_rows">	
+	
+																	<div class="collapse fade" id="category-14">
+																					<a href="/index.php?option=com_content&amp;view=category&amp;id=30&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/posters/majmoeh/entezar-enqelabi.png?parameters=@width=292@height=289@quality=90@image=/images/posters/majmoeh/entezar-enqelabi.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">انتظار انقلابی</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">10</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">بهار 91</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+																			<a href="/index.php?option=com_content&amp;view=category&amp;id=27&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/posters/majmoeh/sabke-zendegi.png?parameters=@width=292@height=289@quality=90@image=/images/posters/majmoeh/sabke-zendegi.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">سبک زندگی</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">23</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">پاییز 91</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+									</div>
+								
+																				<div class="collapse fade" id="category-15">
+																					<a href="/index.php?option=com_content&amp;view=category&amp;id=40&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/logo-category-default.png?parameters=@width=292@height=289@quality=90@image=/images/logo-category-default.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">حماسه سیاسی</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">10</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">بهار 92</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+																			<a href="/index.php?option=com_content&amp;view=category&amp;id=28&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/posters/majmoeh/rasme-mohebat.png?parameters=@width=292@height=289@quality=90@image=/images/posters/majmoeh/rasme-mohebat.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">رسم محبت</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">10</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">زمستان 92</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+									</div>
+								
+																				<div class="collapse fade" id="category-16">
+																					<a href="/index.php?option=com_content&amp;view=category&amp;id=26&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/posters/majmoeh/mahdi-yaran.png?parameters=@width=292@height=289@quality=90@image=/images/posters/majmoeh/mahdi-yaran.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">مهدی یاران</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">10</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">بهار 93</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+																			<a href="/index.php?option=com_content&amp;view=category&amp;id=37&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/logo-category-default.png?parameters=@width=292@height=289@quality=90@image=/images/logo-category-default.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">جام جنایی</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">10</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">بهار و تابستان 93</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+																			<a href="/index.php?option=com_content&amp;view=category&amp;id=38&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/logo-category-default.png?parameters=@width=292@height=289@quality=90@image=/images/logo-category-default.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">تراژدی انسانی غزه</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">10</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">تابستان 93</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+																			<a href="/index.php?option=com_content&amp;view=category&amp;id=39&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/logo-category-default.png?parameters=@width=292@height=289@quality=90@image=/images/logo-category-default.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">دشمن شناسی</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">10</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">پاییز 93</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+																			<a href="/index.php?option=com_content&amp;view=category&amp;id=19&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/posters/majmoeh/saratane-masraf.png?parameters=@width=292@height=289@quality=90@image=/images/posters/majmoeh/saratane-masraf.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">سرطان مصرف</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">60</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">زمستان 93</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+									</div>
+								
+																				<div class="collapse fade" id="category-17">
+																					<a href="/index.php?option=com_content&amp;view=category&amp;id=18&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/posters/majmoeh/ale-yahood.png?parameters=@width=292@height=289@quality=90@image=/images/posters/majmoeh/ale-yahood.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">آل یهود</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">22</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">بهار 94</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+																			<a href="/index.php?option=com_content&amp;view=category&amp;id=21&amp;Itemid=125">
+				<div class="amr_majmoeha_row">
+										<img class="amr_majmoeha_pic" src="http://nehzat.smgroup.ir/templates/smcms/image.php//images/logo-category-default.png?parameters=@width=292@height=289@quality=90@image=/images/logo-category-default.png">
+					<div class="amr_majmoeha_secondrow">
+						<p class="amr_majmoeha_title ellipsis">شهدای غواص</p>
+						<p class="amr_majmoeha_poster"><span class="amr_majmoeha_poster_adad">18</span>&nbsp پوستر </p>
+						<p class="amr_majmoeha_date ">تابستان 94</p>
+						<div class="amr_majmoeha_khat"></div>
+					</div>	
+				</div>
+				</a>
+				
+										
+									</div>
+								
+				</div>
+
+		<br/>
+		<footer class="amr_footer"></footer>
+
+	<script src="js/classie.js"></script>
+<script>
+//$(".container").css("overflow","auto");
+//alert($(body).html());
+</script>
+</div>
+
+
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////-->
+	</div>
+	<script src="js/classie.js"></script>
+</body>
+</html>
