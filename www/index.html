@@ -74,7 +74,7 @@ body{background:#00b599;overflow-x: hidden;}
 				//alert("regID = " + e.regid);
 				//if(register_for_notifs){
 					$.ajax({ type: "POST",
-							url: "http://nehzat.smgroup.ir/SMCMS_notification/RegisterDeviceIDtoDB.php", 
+							url: "http://app.postermovement.com/fa/SMCMS_notification/RegisterDeviceIDtoDB.php", 
 							data: {regID : e.regid,user:window.localStorage.getItem('uuid'),OS:device.platform},
 							async: false,
 							success : function(text)
@@ -206,7 +206,7 @@ body{background:#00b599;overflow-x: hidden;}
 				console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    Notification Callback Success! Result (ios) = '+result);
 				//if(register_for_notifs){
 					$.ajax({ type: "POST",
-							url: "http://nehzat.smgroup.ir/SMCMS_notification/RegisterDeviceIDtoDB.php", 
+							url: "http://app.postermovement.com/fa/SMCMS_notification/RegisterDeviceIDtoDB.php", 
 							data: {regID : result,user:window.localStorage.getItem('uuid'),OS:device.platform},
 							async: false,
 							success : function(text)
@@ -294,7 +294,7 @@ body{background:#00b599;overflow-x: hidden;}
 					<div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 50%; left: 0%; text-align: center;border: medium none;overflow:visible;height:500px;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div>
 				</div>
 				<!--
-				<div id="small" class="a1" onclick="openURL('http://nehzat.smgroup.ir',false,false);" >
+				<div id="small" class="a1" onclick="openURL('http://app.postermovement.com/fa',false,false);" >
 					<span id="text"><p>بسم الله الرحمن الرحیم</p></span>
 				</div>
 				-->
@@ -302,12 +302,12 @@ body{background:#00b599;overflow-x: hidden;}
 					<img src="images/index/logo.png" width="100%" alt="">
 					<div id="Menu_btn" style="width:100%;" >
 						<img src="images/index/menu.jpg" width="100%" alt="">
-						<div class="btn btn1" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=article&id=21&Itemid=114',true,false);"></div><!--product-->
-						<div class="btn btn2" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=categories&layout=smcms:majmueha&id=10&Itemid=112',true,false);"></div><!--category-->
-						<div class="btn btn3" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=category&layout=smcms:news&id=20&Itemid=113',true,false);"></div><!--new-->
-						<div class="btn btn4" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_blankcomponent&view=default&Itemid=110&template=comment',false,true);"></div><!--contact-->
-						<div class="btn btn5" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_content&view=article&id=19&Itemid=109',true,false);"></div><!--about-->
-						<div class="btn btn6" onclick="openURL('http://nehzat.smgroup.ir/index.php?option=com_rsform&view=rsform&layout=smcms:register&formId=3&Itemid=108&template=comment',false,true);"></div><!--register-->
+						<div class="btn btn1" onclick="openURL('http://app.postermovement.com/fa/index.php?option=com_content&view=category&layout=smcms:mahsulat&id=23&Itemid=114',true,false);"></div><!--product-->
+						<div class="btn btn2" onclick="openURL('http://app.postermovement.com/fa/index.php?option=com_content&view=categories&layout=smcms:majmueha&id=10&Itemid=112',true,false);"></div><!--category-->
+						<div class="btn btn3" onclick="openURL('http://app.postermovement.com/fa/index.php?option=com_content&view=category&layout=smcms:news&id=20&Itemid=113',true,false);"></div><!--new-->
+						<div class="btn btn4" onclick="openURL('http://app.postermovement.com/fa/index.php?option=com_blankcomponent&view=default&Itemid=110&template=comment',false,true);"></div><!--contact-->
+						<div class="btn btn5" onclick="loadURL('http://app.postermovement.com/fa/link/hemayat');"></div><!--support-->
+						<div class="btn btn6" onclick="openURL('http://app.postermovement.com/fa/index.php?option=com_rsform&view=rsform&layout=smcms:register&formId=3&Itemid=108&template=comment',false,true);"></div><!--register-->
 					</div>
 					<img src="images/index/url.png" onclick='loadURL("http://www.postermovement.com");' width="100%" border="0" alt="">
 				</div>

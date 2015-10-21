@@ -170,7 +170,20 @@ color:white !important;
 
 
 
+.amr_icon_share{
+	background-image:url(../img/icon_share.png);
+	    background-size: 20px auto;
+}
+.amr_icon_speach_gray{
+	background-image:url(../img/icon_speach_gray.png);
+}
+.amr_icon_share_gray{
+	background-image:url(../img/icon_share_gray.png)
+}
 
+.amr_icon_buy_gray{
+	background-image:url(../img/icon_buy_gray.png);
+}
 
 
 
@@ -1016,4 +1029,102 @@ input[type='submit']
     z-index: -1;
     bottom: 0;
     height: 60px;
+}
+.amr_majmoe_downbutton_contioner
+{
+	position:fixed;
+	width:100%;
+	text-align:center;
+	top:50px;
+	z-index: 999999;
+	background:#ffffff;
+	display0:none;
+	opacity:0;
+}
+.amr_majmoe_downbutton_contioner,.amr_majmoe_downbutton {
+  transform: scale(1);
+  transition: all 400ms ease 0s;
+}
+
+/*///////////////////////////////////// mahsolat new page ///////////////////////////////////////////////*/
+
+
+.amr_mahsolatn_title a,.amr_mahsolatn_title a:hover{color:inherit;}
+
+.amr_mahsolatn_title{	
+	color: #aea634;
+    font-size: 13px;
+    margin-top: 0;    
+	min-height: 37px;
+	}
+
+.mahsolat_gheymat{}
+.amr_mahsolatn_pic{
+    float: right;
+    height: 120px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    width: 120px;
+
+	}
+
+.amr_mahsolatn_summery{
+    color: #747474;
+    font-size: 15px;
+    margin: -21px 139px 0 0;
+    padding: 0 0 10px 0;
+    text-align: justify;
+    overflow: hidden;
+    height: 40px;
+    line-height: 20px;
+}
+@media all and (MIN-width: 699px){
+	.amr_mahsolatn_summery{
+		margin: -17px 0 0;
+	}
+}
+
+.amr_mahsolatn_gheymat{
+	color: #747474;
+    font-size: 13px;
+    min-height: 60px;
+    padding: 0 0 10px 0;
+    text-align: justify;
+}
+.amr_mahsolatn_row{
+    float: right;
+    min-height: 121px;
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+    padding: 0 11px;
+    height: 122px;
+}
+.amr_btn {
+    float: left;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    z-index: 111111111111111111111111111111111111111111111;
+    left: 0;
+    margin-left: 17px;
+    background-size: 20px;
+	    z-index: 0;
+}
+.amr_icons_buttuns {
+    float: left;
+    position: relative;
+    width: 130px;
+    bottom: 62px;
+    height: 24px;
+}
+.amr_header{
+z-index:10000000000000}
+.amr_footer{
+z-index:10000000000000
+}
+
+div.amr_mahsolatsn_rows :last-child {
+    margin-bottom: 65px;
 }
