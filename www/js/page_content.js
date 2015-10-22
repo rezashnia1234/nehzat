@@ -297,17 +297,17 @@ function getURL(URL,cache,iframe) {
 								if (jqXHR.status === 0) {
 									$('.container').html('در اتصال شما به اینترنت مشکلی به وجود آمده است ، امکان نمایش محتوا وجود ندارد');
 								} else if (jqXHR.status == 404) {
-									$('.container').html('صفحه مورد نظر شما یافت نشد');
+									$('.container').html('صفحه مورد نظر شما یافت نشد<a href="parent.history.back();" style="position: fixed; width: 30%; left: 30%; color: white; text-align: center; box-sizing: padding-box; padding: 10px; top: 50%; background: red none repeat scroll 0% 0%; z-index: 99999999;">بازگشت به صفحه قبل</a>');
 								} else if (jqXHR.status == 500) {
-									$('.container').html('Internal Server Error [500].');
+									$('.container').html('Internal Server Error [500].<a href="parent.history.back();" style="position: fixed; width: 30%; left: 30%; color: white; text-align: center; box-sizing: padding-box; padding: 10px; top: 50%; background: red none repeat scroll 0% 0%; z-index: 99999999;">بازگشت به صفحه قبل</a>');
 								} else if (exception === 'parsererror') {
-									$('.container').html('Requested JSON parse failed.');
+									$('.container').html('Requested JSON parse failed.<a href="parent.history.back();" style="position: fixed; width: 30%; left: 30%; color: white; text-align: center; box-sizing: padding-box; padding: 10px; top: 50%; background: red none repeat scroll 0% 0%; z-index: 99999999;">بازگشت به صفحه قبل</a>');
 								} else if (exception === 'timeout') {
-									$('.container').html('Time out error.');
+									$('.container').html('Time out error.<a href="parent.history.back();" style="position: fixed; width: 30%; left: 30%; color: white; text-align: center; box-sizing: padding-box; padding: 10px; top: 50%; background: red none repeat scroll 0% 0%; z-index: 99999999;">بازگشت به صفحه قبل</a>');
 								} else if (exception === 'abort') {
-									$('.container').html('Ajax request aborted.');
+									$('.container').html('Ajax request aborted.<a href="parent.history.back();" style="position: fixed; width: 30%; left: 30%; color: white; text-align: center; box-sizing: padding-box; padding: 10px; top: 50%; background: red none repeat scroll 0% 0%; z-index: 99999999;">بازگشت به صفحه قبل</a>');
 								} else {
-									$('.container').html('Uncaught Error.\n' + jqXHR.responseText);
+									$('.container').html('Uncaught Error.\n' + jqXHR.responseText + '<a href="parent.history.back();" style="position: fixed; width: 30%; left: 30%; color: white; text-align: center; box-sizing: padding-box; padding: 10px; top: 50%; background: red none repeat scroll 0% 0%; z-index: 99999999;">بازگشت به صفحه قبل</a>');
 								}
 							},
 							//error : function (request, status, error) {
