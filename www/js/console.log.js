@@ -3,7 +3,6 @@ if(true)
 	is_document_ready = false;
 	var originallog = console.log;
 	var Old_ConsoleLog_OBJ = "";
-	// $(".container").html("");
 	// console.log("test");
 	console.log = function(txt) {
 		if(is_document_ready == false)
@@ -17,33 +16,12 @@ if(true)
 		}
 		//originallog.apply(console, arguments);
 	}
-	console.log("test");
+
 	$( document ).ready(function() {
 		if(!is_document_ready)
 		{
 			is_document_ready = true;
-			$("body").append("<div style='position: fixed; height: 40%; left: 0px; bottom: 0px; background: black none repeat scroll 0% 0%; color: white; overflow: auto; width: 100%; text-align: left; direction: ltr; padding: 10px 21px ! important;' id='consolelog'><ul><li>console.log init();</li>" + Old_ConsoleLog_OBJ + "</ul></div>");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
-			console.log("test");
+			$("body").append("<style>#consolelog ul li{font-size: 15px;}</style><div style='position: fixed; height: 40%; left: 0px; bottom: 0px; background: black none repeat scroll 0% 0%; color: white; overflow: auto; width: 100%; text-align: left; direction: ltr; padding: 10px 21px ! important;' id='consolelog'><ul><li>console.log init();</li>" + Old_ConsoleLog_OBJ + "</ul></div>");
 		}
 	});
 }
