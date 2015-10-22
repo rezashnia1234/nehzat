@@ -1128,3 +1128,50 @@ z-index:10000000000000
 div.amr_mahsolatsn_rows :last-child {
     margin-bottom: 65px;
 }
+@media (max-width: 410px){
+	.amr_mahsolatn_pic {
+	  float: right;
+	  height: 80px;
+	  margin-bottom: 15px;
+	  margin-left: 20px;
+	  width: 80px;
+	}
+	.amr_mahsolatn_summery {
+	  margin: -21px 99px 0 0;
+	}
+	.amr_khabarha_khat {
+	  margin-right: 102px;
+	}
+	.amr_mahsolatn_gheymat {
+	  padding: 9px 0 10px;
+	}
+	
+}
+@media (max-width: 345px){
+	.amr_mahsolatn_gheymat {
+	  margin-bottom: 29px;
+	  margin-top: -2px;
+	  padding-left: 17px;
+	  padding-top: 0;
+	  text-align: left;
+	  width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
