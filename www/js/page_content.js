@@ -348,7 +348,9 @@ function getURL(URL,cache,iframe) {
 			}
 			temp_html = temp_html + "</style>";
 			temp_html = temp_html + '<footer class="amr_footer"></footer>';
+			alert(temp_html);
 			$('.container').html(temp_html);
+			alert($('.container').html());
 		}
 		
 	}
