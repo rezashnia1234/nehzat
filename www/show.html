@@ -27,6 +27,7 @@
 	<script src="js/iframeResizer.min.js"	type="text/javascript"></script>
 	<script src="js/modernizr.custom.js"></script>
 	<script src="js/jquery.dotdotdot.js"></script>
+	<script src="js/notification.js" type="text/javascript"></script>
 	
 	<link href="gallery/photoswipe.css?v=4.0.5-1.0.4" rel="stylesheet" />
 	<link href="gallery/default-skin.css?v=4.0.5-1.0.4" rel="stylesheet" />
@@ -44,6 +45,7 @@
 		}
 		
 		function onDeviceReady() {
+			register_notification();
 			/*
 			$("#container").swipe({
 				swipe:function(event, direction, distance, duration, fingerCount){
