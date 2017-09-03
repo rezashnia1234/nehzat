@@ -9,24 +9,31 @@
  */
 
 /*jshint browser: true, strict: true, undef: true */
-
-		var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
-			showRight = document.getElementById( 'showRight' ),
-			showRightPush = document.getElementById( 'showRightPush' ),
-			body = document.body;
-
-				showRightPush.onclick = function() {
+$( document ).ready(function() {
+	var menuRight = document.getElementById( 'cbp-spmenu-s2' ),
+		showRight = document.getElementById( 'showRight' ),
+		showRightPush = document.getElementById( 'showRightPush' ),
+		body = document.body;
+		if(showRightPush !== undefined && showRightPush !== null )
+		{
+			showRightPush.onclick = function() {
 				classie.toggle( this, 'active' );
 				classie.toggle( this, 'cbp-spmenu-push-toleft' );
 				classie.toggle( menuRight, 'cbp-spmenu-open' );
 			};
-			
-			
+		}
+		
+		if(menuRight !== undefined && menuRight !== null )
+		{
 			menuRight.onclick = function() {
 				classie.toggle( showRightPush, 'active' );
 				classie.toggle( showRightPush, 'cbp-spmenu-push-toleft' );
 				classie.toggle( menuRight, 'cbp-spmenu-open' );
 			};
+		}
+
+});
+
 		
 ( function( window ) {
 
