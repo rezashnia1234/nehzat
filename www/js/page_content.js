@@ -318,12 +318,12 @@ function getURL(URL,cache,iframe) {
 		}
 		else
 		{
-			alert("000");
 			var myuuid = window.localStorage.getItem('uuid');
 			var myregistered = window.localStorage.getItem('registered');
 			URL = updateURLParameter(URL, "uuidd", myuuid);
 			URL = updateURLParameter(URL, "registered", myregistered);
 			var temp_html = '<div id="loading" ><div style="z-index: 1000; border: medium none; margin: 0px; padding: 0px; width: 100%; height: 100%; top: 0px; left: 0px; background-color: #f0f0f0; opacity: 1; cursor: default; position: fixed;overflow:hidden;" class="blockUI blockOverlay"></div><div style="z-index: 1011; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 28%; left: 0%; text-align: center;border: medium none;overflow:hidden;" class="blockUI blockMsg blockPage"><img src="images/preloader.gif"></div><div style="z-index: 1012; position: fixed; padding: 0px; margin: 0px; width: 100%; top: 40%; left: 0%; text-align: center;border: medium none;overflow:hidden;height:100%;" class="blockUI blockMsg blockPage"><img src="images/loading.png" width="70%"></div></div>';
+			temp_html = "";
 			temp_html = temp_html + '<div class="amr_header"><button id="showRightPush"></button><p class="amr_title">نهضت پوسترهای عاشورایی</p><button onclick="go_back();" class="amr_backbtn"></button></div><br/><br/>';
 			temp_html = temp_html + "<iframe src='" + URL + "' id='comment_content' style='margin-bottom:45px;' onload='loadcompeleted();' scrolling='no'></iframe>";
 			temp_html = temp_html + "<script type='text/javascript'>";
@@ -348,9 +348,7 @@ function getURL(URL,cache,iframe) {
 			}
 			temp_html = temp_html + "</style>";
 			temp_html = temp_html + '<footer class="amr_footer"></footer>';
-			alert(temp_html);
 			$('.container').html(temp_html);
-			alert($('.container').html());
 		}
 		
 	}
