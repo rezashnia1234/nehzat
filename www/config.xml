@@ -130,7 +130,7 @@
     <gap:splash src="images/splash/screen-ipad-landscape-2x.png"		gap:platform="ios"		width="1536"	height="2048" />
 	
 	<access origin="*"/> <!-- allow local pages -->
-	
+	<allow-navigation href="http://app.postermovement.com/*" />
 	
 	
 
