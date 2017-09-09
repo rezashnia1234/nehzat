@@ -326,9 +326,10 @@ function getURL(URL,cache,iframe) {
 			temp_html = temp_html + '<div class="amr_header"><button id="showRightPush"></button><p class="amr_title">نهضت پوسترهای عاشورایی</p><button onclick="go_back();" class="amr_backbtn"></button></div><br/><br/>';
 			temp_html = temp_html + "<iframe src='" + URL + "' id='comment_content' style='margin-bottom:45px;' onload='loadcompeleted();' scrolling='no'></iframe>";
 			temp_html = temp_html + "<script type='text/javascript'>";
+			temp_html = temp_html + "var menuRight=document.getElementById('cbp-spmenu-s2'),showRight=document.getElementById('showRight'),showRightPush=document.getElementById('showRightPush'),body=document.body;null!==showRightPush&&(showRightPush.onclick=function(){classie.toggle(this,'active'),classie.toggle(this,'cbp-spmenu-push-toleft'),classie.toggle(menuRight,'cbp-spmenu-open')}),null!==menuRight&&(menuRight.onclick=function(){alert(),classie.toggle(showRightPush,'active'),classie.toggle(showRightPush,'cbp-spmenu-push-toleft'),classie.toggle(menuRight,'cbp-spmenu-open')});";
 			//if(window.localStorage.getItem('registered') == 0)
 			//	temp_html = temp_html + "$('.mymenu').html('');$('.ui-btn-right.menu').css('display','none');$('#header h1').css('cssText','margin-right:39px !important');$('#header .header-image').css('right','10px');";			
-			temp_html = temp_html + "iFrameResize({log:true,messageCallback:function(messageData){iframe_recive_massage(messageData.message);}});";
+			temp_html = temp_html + "iFrameResize({log:false,messageCallback:function(messageData){iframe_recive_massage(messageData.message);}});";
 			temp_html = temp_html + "//iFrameResize({resizedCallback:function(messageData){},messageCallback:function(messageData){iframe_recive_massage(messageData.message);}});";
 			temp_html = temp_html + "</script>";
 			temp_html = temp_html + "<style>";
