@@ -18,7 +18,7 @@
 
     <!-- Customize your app and platform with the preference element. -->
     <!--<preference name="phonegap-version"           value="cli-5.2.0" />-->          <!-- all: current version of PhoneGap -->
-	<preference name='phonegap-version'			  value='cli-6.5.0' />
+	<preference name='phonegap-version'			  value='cli-5.2.0' />
 	<preference name='pgb-builder-version'		  value='1' />
     <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
@@ -63,12 +63,12 @@
 	<plugin spec="https://github.com/apache/cordova-plugin-splashscreen.git" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-vibration.git" source="git" />
 	
-    <!-- Third party plugins -->
+    <!-- Third party plugins 
 	<preference name="android-build-tool" value="gradle" />
 	<plugin name="phonegap-plugin-push" spec="~1.9.1" source="npm">
 		<param name="SENDER_ID" value="804625540618" />
 	</plugin>
-	
+	-->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
 	<!-- <plugin spec="https://github.com/markmarijnissen/cordova-plugin-share.git" source="git" /> -->
 	<plugin spec="https://github.com/Paldom/UniqueDeviceID.git" source="git" />
