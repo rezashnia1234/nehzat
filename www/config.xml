@@ -17,7 +17,7 @@
     <preference name="permissions"                value="none"/>
 
     <!-- Customize your app and platform with the preference element. -->
-    <!--<preference name="phonegap-version"           value="3.7.0" />-->          <!-- all: current version of PhoneGap -->
+    <!--<preference name="phonegap-version"           value="cli-5.2.0" />-->          <!-- all: current version of PhoneGap -->
 	<preference name='phonegap-version'			  value='cli-6.5.0' />
 	<preference name='pgb-builder-version'		  value='1' />
     <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
@@ -70,7 +70,7 @@
 	</plugin>
 	
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
-	<plugin spec="https://github.com/markmarijnissen/cordova-plugin-share.git" source="git" />
+	<!-- <plugin spec="https://github.com/markmarijnissen/cordova-plugin-share.git" source="git" /> -->
 	<plugin spec="https://github.com/Paldom/UniqueDeviceID.git" source="git" />
 	<plugin spec="https://github.com/apache/cordova-plugin-statusbar.git " source="git" />
 	<gap:config-file platform="ios" parent="UIStatusBarHidden">
@@ -86,9 +86,9 @@
 		</array>
 	</gap:config-file>
 	
-	<plugin spec="https://github.com/nchutchind/cordova-plugin-streaming-media.git" source="git" />
-	<plugin spec="https://github.com/nchutchind/Vitamio-Cordova-Plugin.git" source="git" />
-	<plugin name="com.telerik.plugins.nativepagetransitions" source="npm" />
+	<!-- <plugin spec="https://github.com/nchutchind/cordova-plugin-streaming-media.git" source="git" /> -->
+	<!-- <plugin spec="https://github.com/nchutchind/Vitamio-Cordova-Plugin.git" source="git" /> -->
+	<!-- <plugin name="com.telerik.plugins.nativepagetransitions" source="npm" /> -->
 	
     <!-- Define app icon      -->
     <icon src="images/splash/icon.png" />
